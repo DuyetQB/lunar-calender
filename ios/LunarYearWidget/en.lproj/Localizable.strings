@@ -1,0 +1,14 @@
+/* Lunar day widget — UI chrome */
+"widget_lunar_format" = "Lunar %@";
+"widget_solar_format" = "Solar %@";
+"widget_good_hours_section" = "Good hours";
+"widget_sunrise_sunset_format" = "%@ ↑  %@ ↓";
+
+/* Widget gallery (Settings / widget picker) */
+"widget_lunar_day_title" = "Lunar day";
+"widget_lunar_day_description" = "Lunar and solar dates, quote, good hours, and a light zodiac hint. Sunrise and sunset appear when the app saves a location.";
+
+"widget_daily_quote_title" = "Daily quote";
+"widget_daily_quote_description" = "Shows the same quote of the day as in the app.";
+
+"widget_quote_header" = "Quote of the day";

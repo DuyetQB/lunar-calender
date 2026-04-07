@@ -1,0 +1,126 @@
+/* Tabs */
+"tab_home" = "Home";
+"tab_calendar" = "Calendar";
+"tab_profile" = "Profile";
+"tab_settings" = "Settings";
+
+/* Home */
+"home_title" = "Home";
+"daily_quote_title" = "Quote of the day";
+"home_today_section" = "Today";
+"home_pick_date" = "Choose a date";
+"home_selected_day" = "Selected day";
+"home_view_details" = "Full details";
+"home_share_quote" = "Share";
+"home_tap_for_details" = "Tap for full details";
+"home_good_day_short" = "Favorable";
+"home_bad_day_short" = "Caution";
+"home_close" = "Done";
+"home_share_footer" = "Lunar Year";
+
+/* Settings */
+"settings_title" = "Settings";
+"language_section" = "Language";
+"language_label" = "App language";
+"lang_english" = "English";
+"lang_vietnamese" = "Vietnamese";
+"settings_appearance_section" = "Appearance";
+"settings_appearance_mode" = "Color mode";
+"settings_accent_color" = "Accent";
+"appearance_system" = "System";
+"appearance_light" = "Light";
+"appearance_dark" = "Dark";
+"accent_terracotta" = "Terracotta";
+"accent_ocean" = "Ocean";
+"accent_plum" = "Plum";
+"accent_jade" = "Jade";
+"accent_sunset" = "Sunset";
+"accent_midnight" = "Midnight";
+"settings_widget_section" = "Home screen widget";
+"settings_widget_instructions" = "Touch and hold the Home Screen, tap Edit, then Add Widget. Search for “Lunar Year” and add Daily quote or Lunar day (small / medium / large). Accent comes from above; sunrise/sunset appear on the large Lunar day widget if coordinates are saved below.";
+"settings_widget_location_hcm" = "Use Ho Chi Minh City for widget sunrise/sunset";
+"settings_widget_location_clear" = "Clear saved coordinates";
+"settings_reminders_section" = "Lunar reminders";
+"settings_reminders_footer" = "Mùng 1 and rằm use the Vietnamese lunar calendar (Vietnam time). Allow notifications when prompted. Tap below if alerts look out of date.";
+"settings_reminders_reschedule" = "Refresh notifications for this year";
+"settings_reminder_repeat_monthly" = "Every lunar month";
+"settings_reminder_repeat_yearly" = "Once per year";
+
+/* Widgets (shared with widget extension keys) */
+"widget_lunar_format" = "Lunar %@";
+"widget_solar_format" = "Solar %@";
+"widget_good_hours_section" = "Good hours";
+"widget_sunrise_sunset_format" = "%@ ↑  %@ ↓";
+"widget_lunar_day_title" = "Lunar day";
+"widget_lunar_day_description" = "Lunar and solar dates, quote, good hours, and a light zodiac hint. Sunrise and sunset appear when the app saves a location.";
+"widget_daily_quote_title" = "Daily quote";
+"widget_daily_quote_description" = "Shows the same quote of the day as in the app.";
+"widget_quote_header" = "Quote of the day";
+
+/* Calendar */
+"calendar_title" = "Lunar calendar";
+
+/* Detail */
+"detail_lunar_day" = "Lunar date";
+"detail_solar_term" = "Solar term";
+"detail_hoangdao_title" = "Auspicious / inauspicious";
+"detail_hoangdao" = "Auspicious day";
+"detail_hacdao" = "Inauspicious day";
+"detail_good_hours" = "Good hours";
+"detail_can_chi" = "Stem–Branch";
+"detail_day" = "Day";
+"detail_month" = "Month";
+"detail_year" = "Year";
+"detail_should_avoid_title" = "Suggested / avoid";
+"detail_should" = "Favorable";
+"detail_avoid" = "Avoid";
+"detail_leap_suffix" = "(leap)";
+
+/* Evaluation keys from engine */
+"eval_wedding" = "weddings";
+"eval_groundbreaking" = "groundbreaking";
+"eval_opening_business" = "opening a business";
+"eval_funeral" = "funerals";
+"eval_travel" = "travel";
+"eval_construction" = "construction";
+
+/* Profile */
+"profile_title" = "Lunar Profile";
+"profile_add" = "Add";
+"profile_save" = "Save";
+"profile_delete" = "Delete";
+"profile_name" = "Name";
+"profile_birth_solar" = "Solar birth date";
+"profile_lunar_birth_format" = "Lunar birth:";
+"profile_compare" = "Compare";
+"profile_compare_hint" = "Select two profiles to compare compatibility.";
+"profile_compatibility_title" = "Compatibility";
+"profile_compatibility_score" = "Compatibility score: %d/100";
+"profile_strengths_title" = "Strengths";
+"profile_weaknesses_title" = "Weaknesses";
+
+"profile_summary_excellent" = "Excellent match with strong long-term potential.";
+"profile_summary_good" = "Good match with healthy complementary traits.";
+"profile_summary_balanced" = "Balanced match that can improve with communication.";
+"profile_summary_mixed" = "Mixed compatibility, needs patience and adjustment.";
+"profile_summary_challenging" = "Challenging match, but still workable with effort.";
+"profile_strength_zodiac_strong" = "Zodiac harmony is strong";
+"profile_strength_zodiac_moderate" = "Zodiac rhythm is moderately aligned";
+"profile_strength_element_strong" = "Elements support each other naturally";
+"profile_strength_element_moderate" = "Elements are fairly balanced";
+"profile_strength_base_stable" = "Base compatibility is stable";
+"profile_weakness_zodiac_conflict" = "Zodiac styles can conflict";
+"profile_weakness_element_conflict" = "Element energy may need compromise";
+"profile_weakness_no_major" = "No major red flags";
+"profile_insights_title" = "Insights";
+
+"element_traits_title" = "Personality traits";
+"element_strengths_title" = "Strengths";
+"element_weaknesses_title" = "Weaknesses";
+"element_compatible_title" = "Compatible with";
+"element_incompatible_title" = "Incompatible with";
+"element_suggestions_title" = "Suggestions";
+
+"profile_element_title" = "Your element";
+"profile_basic_element_label" = "Five Elements";
+"profile_napam_label" = "Na Am";

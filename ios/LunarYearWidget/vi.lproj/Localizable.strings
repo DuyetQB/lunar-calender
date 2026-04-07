@@ -1,0 +1,14 @@
+/* Lunar day widget — UI chrome */
+"widget_lunar_format" = "Âm lịch %@";
+"widget_solar_format" = "Dương lịch %@";
+"widget_good_hours_section" = "Giờ hoàng đạo";
+"widget_sunrise_sunset_format" = "%@ ↑  %@ ↓";
+
+/* Widget gallery */
+"widget_lunar_day_title" = "Ngày âm lịch";
+"widget_lunar_day_description" = "Ngày âm/dương lịch, trích dẫn, giờ hoàng đạo và gợi ý tử vi nhẹ. Mặt trời mọc/lặn khi ứng dụng đã lưu vị trí.";
+
+"widget_daily_quote_title" = "Trích dẫn trong ngày";
+"widget_daily_quote_description" = "Hiển thị cùng trích dẫn trong ngày như trong ứng dụng.";
+
+"widget_quote_header" = "Trích dẫn trong ngày";

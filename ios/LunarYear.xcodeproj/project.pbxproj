@@ -1,0 +1,710 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AA0001 /* LunarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0011 /* LunarApp.swift */; };
+		AA0002 /* CalendarMonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0012 /* CalendarMonthView.swift */; };
+		AA0003 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0013 /* DetailView.swift */; };
+		AA0005 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0014 /* Theme.swift */; };
+		AA0006 /* SharedConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0015 /* SharedConfig.swift */; };
+		AA0007 /* AppLanguageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0016 /* AppLanguageManager.swift */; };
+		AA0008 /* RootTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0017 /* RootTabView.swift */; };
+		AA0009 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0018 /* HomeView.swift */; };
+		AA0010 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0019 /* SettingsView.swift */; };
+		AA001A /* DailyQuotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0020 /* DailyQuotes.swift */; };
+		AA001B /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0023 /* ThemeManager.swift */; };
+		RM0001 /* ReminderModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = RM0011 /* ReminderModels.swift */; };
+		RM0002 /* LunarReminderConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = RM0012 /* LunarReminderConverter.swift */; };
+		RM0003 /* ReminderStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = RM0013 /* ReminderStorage.swift */; };
+		RM0004 /* ReminderNotificationPort.swift in Sources */ = {isa = PBXBuildFile; fileRef = RM0014 /* ReminderNotificationPort.swift */; };
+		RM0005 /* ReminderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = RM0015 /* ReminderService.swift */; };
+		RM0006 /* ReminderStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = RM0016 /* ReminderStore.swift */; };
+		PR0001 /* ProfileModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = PR0011 /* ProfileModels.swift */; };
+		PR0002 /* LunarProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = PR0012 /* LunarProfileService.swift */; };
+		PR0003 /* ProfileStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = PR0013 /* ProfileStore.swift */; };
+		PR0004 /* ProfileCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = PR0014 /* ProfileCardView.swift */; };
+		PR0005 /* CompatibilityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = PR0015 /* CompatibilityView.swift */; };
+		PR0006 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = PR0016 /* ProfileView.swift */; };
+		PR0007 /* LunarService.swift in Sources */ = {isa = PBXBuildFile; fileRef = PR0017 /* LunarService.swift */; };
+		PR0008 /* ElementService.swift in Sources */ = {isa = PBXBuildFile; fileRef = PR0018 /* ElementService.swift */; };
+		WG0006 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0014 /* Theme.swift */; };
+		LC0001 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = LC0011 /* Models.swift */; };
+		LC0002 /* JulianDateConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = LC0012 /* JulianDateConverter.swift */; };
+		LC0003 /* AstronomicalCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = LC0013 /* AstronomicalCalculator.swift */; };
+		LC0004 /* NewMoonCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = LC0014 /* NewMoonCalculator.swift */; };
+		LC0005 /* SunLongitudeCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = LC0015 /* SunLongitudeCalculator.swift */; };
+		LC0006 /* TietKhiCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = LC0016 /* TietKhiCalculator.swift */; };
+		LC0007 /* LunarConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = LC0017 /* LunarConverter.swift */; };
+		LC0008 /* CanChiCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = LC0018 /* CanChiCalculator.swift */; };
+		LC0009 /* HoangDaoCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = LC0019 /* HoangDaoCalculator.swift */; };
+		LC0010 /* LunarEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = LC0020 /* LunarEngine.swift */; };
+		LOC004 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = LOC001 /* Localizable.strings */; };
+		AS0001 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AS0011 /* Assets.xcassets */; };
+		WG0001 /* LunarYearWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = WG0011 /* LunarYearWidgetBundle.swift */; };
+		WG0002 /* QuoteWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = WG0012 /* QuoteWidget.swift */; };
+		WG0003 /* SharedConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0015 /* SharedConfig.swift */; };
+		WG0004 /* DailyQuotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0020 /* DailyQuotes.swift */; };
+		WG0005 /* LunarYearWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = WG0000 /* LunarYearWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		WDA001 /* WidgetDataModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = WD0011 /* WidgetDataModels.swift */; };
+		WDA002 /* SunTimeCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = WD0012 /* SunTimeCalculator.swift */; };
+		WDA003 /* ZodiacCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = WD0013 /* ZodiacCatalog.swift */; };
+		WDA004 /* WidgetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = WD0014 /* WidgetService.swift */; };
+		WDA005 /* WidgetDataSampleViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = WD0016 /* WidgetDataSampleViews.swift */; };
+		WDA007 /* WidgetLocalized.swift in Sources */ = {isa = PBXBuildFile; fileRef = WD0018 /* WidgetLocalized.swift */; };
+		WDA006 /* LunarWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = WG0015 /* LunarWidget.swift */; };
+		WDW001 /* WidgetDataModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = WD0011 /* WidgetDataModels.swift */; };
+		WDW002 /* SunTimeCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = WD0012 /* SunTimeCalculator.swift */; };
+		WDW003 /* ZodiacCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = WD0013 /* ZodiacCatalog.swift */; };
+		WDW004 /* WidgetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = WD0014 /* WidgetService.swift */; };
+		WDW005 /* WidgetLocalized.swift in Sources */ = {isa = PBXBuildFile; fileRef = WD0018 /* WidgetLocalized.swift */; };
+		WG0007 /* LunarWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = WG0015 /* LunarWidget.swift */; };
+		WG00LC1 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = LC0011 /* Models.swift */; };
+		WG00LC2 /* JulianDateConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = LC0012 /* JulianDateConverter.swift */; };
+		WG00LC3 /* AstronomicalCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = LC0013 /* AstronomicalCalculator.swift */; };
+		WG00LC4 /* NewMoonCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = LC0014 /* NewMoonCalculator.swift */; };
+		WG00LC5 /* SunLongitudeCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = LC0015 /* SunLongitudeCalculator.swift */; };
+		WG00LC6 /* TietKhiCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = LC0016 /* TietKhiCalculator.swift */; };
+		WG00LC7 /* LunarConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = LC0017 /* LunarConverter.swift */; };
+		WG00LC8 /* CanChiCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = LC0018 /* CanChiCalculator.swift */; };
+		WG00LC9 /* HoangDaoCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = LC0019 /* HoangDaoCalculator.swift */; };
+		WG00LCA /* LunarEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = LC0020 /* LunarEngine.swift */; };
+		WD000R1 /* zodiacData.json in Resources */ = {isa = PBXBuildFile; fileRef = WD0017 /* zodiacData.json */; };
+		WD000R2 /* zodiacData.json in Resources */ = {isa = PBXBuildFile; fileRef = WD0017 /* zodiacData.json */; };
+		WGT004 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = WGT001 /* Localizable.strings */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		WG0500 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA0500 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = WG0200;
+			remoteInfo = LunarYearWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		WG0400 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				WG0005 /* LunarYearWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		AA0000 /* LunarYear.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LunarYear.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA0011 /* LunarApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunarApp.swift; sourceTree = "<group>"; };
+		AA0012 /* CalendarMonthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarMonthView.swift; sourceTree = "<group>"; };
+		AA0013 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		AA0014 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		AA0015 /* SharedConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedConfig.swift; sourceTree = "<group>"; };
+		AA0016 /* AppLanguageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLanguageManager.swift; sourceTree = "<group>"; };
+		AA0017 /* RootTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabView.swift; sourceTree = "<group>"; };
+		AA0018 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		AA0019 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		AA0020 /* DailyQuotes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyQuotes.swift; sourceTree = "<group>"; };
+		AA0023 /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
+		AS0011 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		RM0011 /* ReminderModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderModels.swift; sourceTree = "<group>"; };
+		RM0012 /* LunarReminderConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunarReminderConverter.swift; sourceTree = "<group>"; };
+		RM0013 /* ReminderStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderStorage.swift; sourceTree = "<group>"; };
+		RM0014 /* ReminderNotificationPort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderNotificationPort.swift; sourceTree = "<group>"; };
+		RM0015 /* ReminderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderService.swift; sourceTree = "<group>"; };
+		RM0016 /* ReminderStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderStore.swift; sourceTree = "<group>"; };
+		PR0011 /* ProfileModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModels.swift; sourceTree = "<group>"; };
+		PR0012 /* LunarProfileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunarProfileService.swift; sourceTree = "<group>"; };
+		PR0013 /* ProfileStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileStore.swift; sourceTree = "<group>"; };
+		PR0014 /* ProfileCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCardView.swift; sourceTree = "<group>"; };
+		PR0015 /* CompatibilityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompatibilityView.swift; sourceTree = "<group>"; };
+		PR0016 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		PR0017 /* LunarService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunarService.swift; sourceTree = "<group>"; };
+		PR0018 /* ElementService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementService.swift; sourceTree = "<group>"; };
+		AA0021 /* LunarYear.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LunarYear.entitlements; sourceTree = "<group>"; };
+		LC0011 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		LC0012 /* JulianDateConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JulianDateConverter.swift; sourceTree = "<group>"; };
+		LC0013 /* AstronomicalCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomicalCalculator.swift; sourceTree = "<group>"; };
+		LC0014 /* NewMoonCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMoonCalculator.swift; sourceTree = "<group>"; };
+		LC0015 /* SunLongitudeCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunLongitudeCalculator.swift; sourceTree = "<group>"; };
+		LC0016 /* TietKhiCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TietKhiCalculator.swift; sourceTree = "<group>"; };
+		LC0017 /* LunarConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunarConverter.swift; sourceTree = "<group>"; };
+		LC0018 /* CanChiCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanChiCalculator.swift; sourceTree = "<group>"; };
+		LC0019 /* HoangDaoCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoangDaoCalculator.swift; sourceTree = "<group>"; };
+		LC0020 /* LunarEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunarEngine.swift; sourceTree = "<group>"; };
+		LOC002 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		LOC003 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Localizable.strings; sourceTree = "<group>"; };
+		WG0000 /* LunarYearWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = LunarYearWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		WG0011 /* LunarYearWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunarYearWidgetBundle.swift; sourceTree = "<group>"; };
+		WG0012 /* QuoteWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteWidget.swift; sourceTree = "<group>"; };
+		WG0013 /* LunarYearWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LunarYearWidget.entitlements; sourceTree = "<group>"; };
+		WG0014 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		WG0015 /* LunarWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunarWidget.swift; sourceTree = "<group>"; };
+		WD0011 /* WidgetDataModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetDataModels.swift; sourceTree = "<group>"; };
+		WD0012 /* SunTimeCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunTimeCalculator.swift; sourceTree = "<group>"; };
+		WD0013 /* ZodiacCatalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZodiacCatalog.swift; sourceTree = "<group>"; };
+		WD0014 /* WidgetService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetService.swift; sourceTree = "<group>"; };
+		WD0016 /* WidgetDataSampleViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetDataSampleViews.swift; sourceTree = "<group>"; };
+		WD0017 /* zodiacData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = zodiacData.json; sourceTree = "<group>"; };
+		WD0018 /* WidgetLocalized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetLocalized.swift; sourceTree = "<group>"; };
+		WGT002 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		WGT003 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Localizable.strings; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AA0100 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		WG0103 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AA0097 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AA0000 /* LunarYear.app */,
+				WG0000 /* LunarYearWidgetExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AA0098 /* SampleApp */ = {
+			isa = PBXGroup;
+			children = (
+				AA0011 /* LunarApp.swift */,
+				AA0012 /* CalendarMonthView.swift */,
+				AA0013 /* DetailView.swift */,
+				AA0014 /* Theme.swift */,
+				AA0015 /* SharedConfig.swift */,
+				AA0016 /* AppLanguageManager.swift */,
+				AA0023 /* ThemeManager.swift */,
+				AA0017 /* RootTabView.swift */,
+				AA0018 /* HomeView.swift */,
+				AA0019 /* SettingsView.swift */,
+				AA0020 /* DailyQuotes.swift */,
+				AS0011 /* Assets.xcassets */,
+				WD0090 /* Widget */,
+				RM0090 /* Reminder */,
+				PR0090 /* Profile */,
+				AA0021 /* LunarYear.entitlements */,
+				LOC001 /* Localizable.strings */,
+			);
+			path = SampleApp;
+			sourceTree = "<group>";
+		};
+		AA0099 = {
+			isa = PBXGroup;
+			children = (
+				AA0098 /* SampleApp */,
+				WG0098 /* LunarYearWidget */,
+				LC0090 /* LunarCore/Sources/LunarCore */,
+				AA0097 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		LC0090 /* LunarCore/Sources/LunarCore */ = {
+			isa = PBXGroup;
+			children = (
+				LC0011 /* Models.swift */,
+				LC0012 /* JulianDateConverter.swift */,
+				LC0013 /* AstronomicalCalculator.swift */,
+				LC0014 /* NewMoonCalculator.swift */,
+				LC0015 /* SunLongitudeCalculator.swift */,
+				LC0016 /* TietKhiCalculator.swift */,
+				LC0017 /* LunarConverter.swift */,
+				LC0018 /* CanChiCalculator.swift */,
+				LC0019 /* HoangDaoCalculator.swift */,
+				LC0020 /* LunarEngine.swift */,
+			);
+			path = LunarCore/Sources/LunarCore;
+			sourceTree = "<group>";
+		};
+		WG0098 /* LunarYearWidget */ = {
+			isa = PBXGroup;
+			children = (
+				WG0011 /* LunarYearWidgetBundle.swift */,
+				WG0012 /* QuoteWidget.swift */,
+				WG0015 /* LunarWidget.swift */,
+				WGT001 /* Localizable.strings */,
+				WG0013 /* LunarYearWidget.entitlements */,
+				WG0014 /* Info.plist */,
+			);
+			path = LunarYearWidget;
+			sourceTree = "<group>";
+		};
+		WD0090 /* Widget */ = {
+			isa = PBXGroup;
+			children = (
+				WD0011 /* WidgetDataModels.swift */,
+				WD0012 /* SunTimeCalculator.swift */,
+				WD0013 /* ZodiacCatalog.swift */,
+				WD0014 /* WidgetService.swift */,
+				WD0018 /* WidgetLocalized.swift */,
+				WD0016 /* WidgetDataSampleViews.swift */,
+				WD0017 /* zodiacData.json */,
+			);
+			path = Features/Widget;
+			sourceTree = "<group>";
+		};
+		RM0090 /* Reminder */ = {
+			isa = PBXGroup;
+			children = (
+				RM0011 /* ReminderModels.swift */,
+				RM0012 /* LunarReminderConverter.swift */,
+				RM0013 /* ReminderStorage.swift */,
+				RM0014 /* ReminderNotificationPort.swift */,
+				RM0015 /* ReminderService.swift */,
+				RM0016 /* ReminderStore.swift */,
+			);
+			path = Features/Reminder;
+			sourceTree = "<group>";
+		};
+		PR0090 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				PR0011 /* ProfileModels.swift */,
+				PR0012 /* LunarProfileService.swift */,
+				PR0013 /* ProfileStore.swift */,
+				PR0014 /* ProfileCardView.swift */,
+				PR0015 /* CompatibilityView.swift */,
+				PR0016 /* ProfileView.swift */,
+				PR0017 /* LunarService.swift */,
+				PR0018 /* ElementService.swift */,
+			);
+			path = Features/Profile;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AA0200 /* LunarYear */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA0402 /* Build configuration list for PBXNativeTarget "LunarYear" */;
+			buildPhases = (
+				AA0300 /* Sources */,
+				AA0100 /* Frameworks */,
+				AA0101 /* Resources */,
+				WG0400 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				WG0501 /* PBXTargetDependency */,
+			);
+			name = LunarYear;
+			productName = LunarYear;
+			productReference = AA0000 /* LunarYear.app */;
+			productType = "com.apple.product-type.application";
+		};
+		WG0200 /* LunarYearWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = WG0403 /* Build configuration list for PBXNativeTarget "LunarYearWidgetExtension" */;
+			buildPhases = (
+				WG0301 /* Sources */,
+				WG0104 /* Resources */,
+				WG0103 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LunarYearWidgetExtension;
+			productName = LunarYearWidgetExtension;
+			productReference = WG0000 /* LunarYearWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AA0500 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					AA0200 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					WG0200 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = AA0400 /* Build configuration list for PBXProject "LunarYear" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				vi,
+			);
+			mainGroup = AA0099;
+			productRefGroup = AA0097 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AA0200 /* LunarYear */,
+				WG0200 /* LunarYearWidgetExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AA0101 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AS0001 /* Assets.xcassets in Resources */,
+				LOC004 /* Localizable.strings in Resources */,
+				WD000R1 /* zodiacData.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		WG0104 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				WD000R2 /* zodiacData.json in Resources */,
+				WGT004 /* Localizable.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AA0300 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA0001 /* LunarApp.swift in Sources */,
+				AA0002 /* CalendarMonthView.swift in Sources */,
+				AA0003 /* DetailView.swift in Sources */,
+				AA0005 /* Theme.swift in Sources */,
+				LC0001 /* Models.swift in Sources */,
+				LC0002 /* JulianDateConverter.swift in Sources */,
+				LC0003 /* AstronomicalCalculator.swift in Sources */,
+				LC0004 /* NewMoonCalculator.swift in Sources */,
+				LC0005 /* SunLongitudeCalculator.swift in Sources */,
+				LC0006 /* TietKhiCalculator.swift in Sources */,
+				LC0007 /* LunarConverter.swift in Sources */,
+				LC0008 /* CanChiCalculator.swift in Sources */,
+				LC0009 /* HoangDaoCalculator.swift in Sources */,
+				LC0010 /* LunarEngine.swift in Sources */,
+				AA0006 /* SharedConfig.swift in Sources */,
+				AA0007 /* AppLanguageManager.swift in Sources */,
+				AA0008 /* RootTabView.swift in Sources */,
+				AA0009 /* HomeView.swift in Sources */,
+				AA0010 /* SettingsView.swift in Sources */,
+				AA001A /* DailyQuotes.swift in Sources */,
+				AA001B /* ThemeManager.swift in Sources */,
+				RM0001 /* ReminderModels.swift in Sources */,
+				RM0002 /* LunarReminderConverter.swift in Sources */,
+				RM0003 /* ReminderStorage.swift in Sources */,
+				RM0004 /* ReminderNotificationPort.swift in Sources */,
+				RM0005 /* ReminderService.swift in Sources */,
+				RM0006 /* ReminderStore.swift in Sources */,
+				PR0001 /* ProfileModels.swift in Sources */,
+				PR0002 /* LunarProfileService.swift in Sources */,
+				PR0003 /* ProfileStore.swift in Sources */,
+				PR0004 /* ProfileCardView.swift in Sources */,
+				PR0005 /* CompatibilityView.swift in Sources */,
+				PR0006 /* ProfileView.swift in Sources */,
+				PR0007 /* LunarService.swift in Sources */,
+				PR0008 /* ElementService.swift in Sources */,
+				WDA001 /* WidgetDataModels.swift in Sources */,
+				WDA002 /* SunTimeCalculator.swift in Sources */,
+				WDA003 /* ZodiacCatalog.swift in Sources */,
+				WDA004 /* WidgetService.swift in Sources */,
+				WDA007 /* WidgetLocalized.swift in Sources */,
+				WDA005 /* WidgetDataSampleViews.swift in Sources */,
+				WDA006 /* LunarWidget.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		WG0301 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				WG0001 /* LunarYearWidgetBundle.swift in Sources */,
+				WG0002 /* QuoteWidget.swift in Sources */,
+				WG0007 /* LunarWidget.swift in Sources */,
+				WG0003 /* SharedConfig.swift in Sources */,
+				WG0004 /* DailyQuotes.swift in Sources */,
+				WG0006 /* Theme.swift in Sources */,
+				WDW001 /* WidgetDataModels.swift in Sources */,
+				WDW002 /* SunTimeCalculator.swift in Sources */,
+				WDW003 /* ZodiacCatalog.swift in Sources */,
+				WDW004 /* WidgetService.swift in Sources */,
+				WDW005 /* WidgetLocalized.swift in Sources */,
+				WG00LC1 /* Models.swift in Sources */,
+				WG00LC2 /* JulianDateConverter.swift in Sources */,
+				WG00LC3 /* AstronomicalCalculator.swift in Sources */,
+				WG00LC4 /* NewMoonCalculator.swift in Sources */,
+				WG00LC5 /* SunLongitudeCalculator.swift in Sources */,
+				WG00LC6 /* TietKhiCalculator.swift in Sources */,
+				WG00LC7 /* LunarConverter.swift in Sources */,
+				WG00LC8 /* CanChiCalculator.swift in Sources */,
+				WG00LC9 /* HoangDaoCalculator.swift in Sources */,
+				WG00LCA /* LunarEngine.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		WG0501 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = WG0200 /* LunarYearWidgetExtension */;
+			targetProxy = WG0500 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		LOC001 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				LOC002 /* en */,
+				LOC003 /* vi */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		WGT001 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				WGT002 /* en */,
+				WGT003 /* vi */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AA0600 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AA0601 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_OPTIMIZATION_LEVEL = s;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AA0602 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SampleApp/LunarYear.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = MY7XKLV787;
+				ENABLE_PREVIEWS = YES;
+				EXTRACT_APP_INTENTS_METADATA = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Âm Lịch";
+				INFOPLIST_KEY_UIApplicationScene_Manifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lenodev.lunaryear.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AA0603 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SampleApp/LunarYear.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = MY7XKLV787;
+				ENABLE_PREVIEWS = YES;
+				EXTRACT_APP_INTENTS_METADATA = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Âm Lịch";
+				INFOPLIST_KEY_UIApplicationScene_Manifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lenodev.lunaryear.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		AA0604 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = LunarYearWidget/LunarYearWidget.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MY7XKLV787;
+				EXTRACT_APP_INTENTS_METADATA = NO;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = LunarYearWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lenodev.lunaryear.app.LunarYearWidget;
+				PRODUCT_BUNDLE_PACKAGE_TYPE = "XPC!";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AA0605 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = LunarYearWidget/LunarYearWidget.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MY7XKLV787;
+				EXTRACT_APP_INTENTS_METADATA = NO;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = LunarYearWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lenodev.lunaryear.app.LunarYearWidget;
+				PRODUCT_BUNDLE_PACKAGE_TYPE = "XPC!";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AA0400 /* Build configuration list for PBXProject "LunarYear" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA0600 /* Debug */,
+				AA0601 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AA0402 /* Build configuration list for PBXNativeTarget "LunarYear" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA0602 /* Debug */,
+				AA0603 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		WG0403 /* Build configuration list for PBXNativeTarget "LunarYearWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA0604 /* Debug */,
+				AA0605 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AA0500 /* Project object */;
+}

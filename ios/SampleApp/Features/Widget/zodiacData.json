@@ -1,0 +1,182 @@
+[
+  {
+    "branchIndex": 0,
+    "animalEn": "Rat",
+    "animalVi": "Chuột",
+    "summariesEn": [
+      "Quick thinking pays off—sketch a plan before noon.",
+      "Small savings and careful words keep luck steady.",
+      "A good day to tidy accounts and reconnect with kin."
+    ],
+    "summariesVi": [
+      "Tư duy nhanh có lợi—hoạch định trước buổi trưa.",
+      "Tiết kiệm nhỏ và lời nói cẩn trọng giữ vận ổn.",
+      "Ngày hợp dọn sổ sách và hỏi thăm người thân."
+    ]
+  },
+  {
+    "branchIndex": 1,
+    "animalEn": "Ox",
+    "animalVi": "Trâu",
+    "summariesEn": [
+      "Steady effort beats rushing; finish one task well.",
+      "Patience with family matters softens the evening.",
+      "Eat simply and rest—your strength is endurance."
+    ],
+    "summariesVi": [
+      "Bền bỉ hơn vội vàng; làm trọn một việc.",
+      "Nhẫn nại chuyện nhà giúp buổi tối êm ấm.",
+      "Ăn giản dị và nghỉ—sức bạn là sức bền."
+    ]
+  },
+  {
+    "branchIndex": 2,
+    "animalEn": "Tiger",
+    "animalVi": "Hổ",
+    "summariesEn": [
+      "Courage is pacing yourself, not charging every door.",
+      "Outdoor air clears a stuck mood before sunset.",
+      "Speak briefly; your presence already carries weight."
+    ],
+    "summariesVi": [
+      "Can đảm là giữ nhịp, không phải xông mọi cửa.",
+      "Không khí ngoài trời xua tan bế tắc trước hoàng hôn.",
+      "Nói ít thôi; sự hiện diện đã đủ sức nặng."
+    ]
+  },
+  {
+    "branchIndex": 3,
+    "animalEn": "Rabbit",
+    "animalVi": "Mèo / Thỏ",
+    "summariesEn": [
+      "Gentle diplomacy opens doors that force would break.",
+      "Creative notes or music lift the afternoon.",
+      "Avoid sharp debates—choose listening instead."
+    ],
+    "summariesVi": [
+      "Ngoại giao nhẹ mở cửa mà cứng rắn có thể làm gãy.",
+      "Ghi chú sáng tạo hoặc nhạc nâng buổi chiều.",
+      "Tránh tranh luận gắt—chọn lắng nghe."
+    ]
+  },
+  {
+    "branchIndex": 4,
+    "animalEn": "Dragon",
+    "animalVi": "Rồng",
+    "summariesEn": [
+      "Vision is high; keep feet on the schedule.",
+      "One bold step early, then consolidate gains.",
+      "Humility after a win preserves tomorrow’s luck."
+    ],
+    "summariesVi": [
+      "Tầm nhìn cao; giữ chân trên lịch trình.",
+      "Một bước táo bạo sớm, rồi củng cố thành quả.",
+      "Khiêm tốn sau thắng lợi giữ vận mai sau."
+    ]
+  },
+  {
+    "branchIndex": 5,
+    "animalEn": "Snake",
+    "animalVi": "Rắn",
+    "summariesEn": [
+      "Observe first; clarity comes after quiet study.",
+      "A discreet favor returns when you least expect.",
+      "Evening reflection sorts what the day scattered."
+    ],
+    "summariesVi": [
+      "Quan sát trước; sáng tỏ sau khi suy ngẫm yên lặng.",
+      "Âm thầm giúp người sẽ được báo đáp bất ngờ.",
+      "Tối suy ngẫm gom những gì ngày làm rối."
+    ]
+  },
+  {
+    "branchIndex": 6,
+    "animalEn": "Horse",
+    "animalVi": "Ngựa",
+    "summariesEn": [
+      "Motion helps—walk, then decide.",
+      "Midday focus blocks beat scattered multitasking.",
+      "Share a laugh; it oils the wheels of work."
+    ],
+    "summariesVi": [
+      "Chuyển động giúp ích—đi bộ, rồi quyết.",
+      "Buổi trưa tập trung từng khối hơn làm nhiều việc lộn xộn.",
+      "Cười đùa chút—công việc trơn hơn."
+    ]
+  },
+  {
+    "branchIndex": 7,
+    "animalEn": "Goat",
+    "animalVi": "Dê",
+    "summariesEn": [
+      "Comfort and beauty at home reset your nerves.",
+      "Collaborate; shared meals bring useful ideas.",
+      "Say no to guilt trips—kindness needs boundaries."
+    ],
+    "summariesVi": [
+      "Ấm áp và đẹp ở nhà xoa dịu thần kinh.",
+      "Hợp tác; bữa cùng nhau mang ý hay.",
+      "Từ chối cảm giác tội lỗi—tử tế cần ranh giới."
+    ]
+  },
+  {
+    "branchIndex": 8,
+    "animalEn": "Monkey",
+    "animalVi": "Khỉ",
+    "summariesEn": [
+      "Wit solves what worry cannot—try a playful angle.",
+      "Double-check messages; humor hides typos.",
+      "Learn one new fact; it sparks the evening."
+    ],
+    "summariesVi": [
+      "Hài hước xử được việc lo lắng không xử được.",
+      "Đọc lại tin nhắn; dí dỏm hay che lỗi đánh máy.",
+      "Học một điều mới; tối sẽ thêm hứng."
+    ]
+  },
+  {
+    "branchIndex": 9,
+    "animalEn": "Rooster",
+    "animalVi": "Gà",
+    "summariesEn": [
+      "Early honesty saves hours of repair later.",
+      "Polish presentation—details signal respect.",
+      "Punctuality today is its own small fortune."
+    ],
+    "summariesVi": [
+      "Thật thà sớm tiết kiệm giờ sửa chữa sau.",
+      "Chỉn chu diện mạo—tiểu tiết là tôn trọng.",
+      "Đúng giờ hôm nay là một vận nhỏ."
+    ]
+  },
+  {
+    "branchIndex": 10,
+    "animalEn": "Dog",
+    "animalVi": "Chó",
+    "summariesEn": [
+      "Loyalty shown quietly beats loud promises.",
+      "Help a neighbor; the loop of luck tightens.",
+      "Guard sleep—loyalty to self restores clarity."
+    ],
+    "summariesVi": [
+      "Trung thành thầm lặng hơn lời hứa to.",
+      "Giúp hàng xóm; vòng may chặt lại.",
+      "Giữ giấc ngủ—trung với mình mới sáng suốt."
+    ]
+  },
+  {
+    "branchIndex": 11,
+    "animalEn": "Pig",
+    "animalVi": "Lợn",
+    "summariesEn": [
+      "Simple pleasures refill what ambition drained.",
+      "Forgive a small slight; the day feels wider.",
+      "Share food; abundance grows when it circulates."
+    ],
+    "summariesVi": [
+      "Niềm vui giản dị nạp lại những gì tham vọng hút cạn.",
+      "Bỏ qua chuyện nhỏ; ngày sẽ rộng hơn.",
+      "Chia bữa; của dư khi chia sẻ mới nhân lên."
+    ]
+  }
+]

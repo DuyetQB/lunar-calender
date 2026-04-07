@@ -1,0 +1,126 @@
+/* Tabs */
+"tab_home" = "Trang chủ";
+"tab_calendar" = "Lịch";
+"tab_profile" = "Hồ sơ";
+"tab_settings" = "Cài đặt";
+
+/* Home */
+"home_title" = "Trang chủ";
+"daily_quote_title" = "Câu chuyện trong ngày";
+"home_today_section" = "Hôm nay";
+"home_pick_date" = "Chọn ngày";
+"home_selected_day" = "Ngày đã chọn";
+"home_view_details" = "Xem chi tiết";
+"home_share_quote" = "Chia sẻ";
+"home_tap_for_details" = "Chạm để xem chi tiết";
+"home_good_day_short" = "Thuận";
+"home_bad_day_short" = "Kỵ";
+"home_close" = "Đóng";
+"home_share_footer" = "Lunar Year";
+
+/* Settings */
+"settings_title" = "Cài đặt";
+"language_section" = "Ngôn ngữ";
+"language_label" = "Ngôn ngữ ứng dụng";
+"lang_english" = "Tiếng Anh";
+"lang_vietnamese" = "Tiếng Việt";
+"settings_appearance_section" = "Giao diện";
+"settings_appearance_mode" = "Chế độ màu";
+"settings_accent_color" = "Màu nhấn";
+"appearance_system" = "Theo hệ thống";
+"appearance_light" = "Sáng";
+"appearance_dark" = "Tối";
+"accent_terracotta" = "Đất nung";
+"accent_ocean" = "Đại dương";
+"accent_plum" = "Mận";
+"accent_jade" = "Ngọc bích";
+"accent_sunset" = "Hoàng hôn";
+"accent_midnight" = "Nửa đêm";
+"settings_widget_section" = "Widget màn hình chính";
+"settings_widget_instructions" = "Chạm giữ màn hình chính, chọn Sửa, rồi Thêm widget. Tìm “Lunar Year” và chọn Daily quote hoặc Lunar day (nhỏ / vừa / lớn). Màu nhấn lấy ở trên; mặt trời mọc/lặn hiện trên widget Lunar day cỡ lớn khi đã lưu tọa độ bên dưới.";
+"settings_widget_location_hcm" = "Dùng TP. Hồ Chí Minh cho mặt trời mọc/lặn trên widget";
+"settings_widget_location_clear" = "Xóa tọa độ đã lưu";
+"settings_reminders_section" = "Nhắc âm lịch";
+"settings_reminders_footer" = "Mùng 1 và rằm theo lịch âm Việt Nam (giờ Việt Nam). Cho phép thông báo khi được hỏi. Chạm nút bên dưới nếu lịch nhắc không khớp.";
+"settings_reminders_reschedule" = "Làm mới thông báo trong năm nay";
+"settings_reminder_repeat_monthly" = "Mỗi tháng âm lịch";
+"settings_reminder_repeat_yearly" = "Một lần mỗi năm";
+
+/* Widgets (shared with widget extension keys) */
+"widget_lunar_format" = "Âm lịch %@";
+"widget_solar_format" = "Dương lịch %@";
+"widget_good_hours_section" = "Giờ hoàng đạo";
+"widget_sunrise_sunset_format" = "%@ ↑  %@ ↓";
+"widget_lunar_day_title" = "Ngày âm lịch";
+"widget_lunar_day_description" = "Ngày âm/dương lịch, câu chuyện, giờ hoàng đạo và gợi ý tử vi nhẹ. Mặt trời mọc/lặn khi ứng dụng đã lưu vị trí.";
+"widget_daily_quote_title" = "Câu chuyện trong ngày";
+"widget_daily_quote_description" = "Hiển thị cùng câu chuyện trong ngày như trong ứng dụng.";
+"widget_quote_header" = "Câu chuyện trong ngày";
+
+/* Calendar */
+"calendar_title" = "Lịch âm";
+
+/* Detail */
+"detail_lunar_day" = "Ngày âm";
+"detail_solar_term" = "Tiết khí";
+"detail_hoangdao_title" = "Hoàng đạo / Hắc đạo";
+"detail_hoangdao" = "Hoàng đạo";
+"detail_hacdao" = "Hắc đạo";
+"detail_good_hours" = "Giờ tốt";
+"detail_can_chi" = "Can Chi";
+"detail_day" = "Ngày";
+"detail_month" = "Tháng";
+"detail_year" = "Năm";
+"detail_should_avoid_title" = "Nên / Kiêng kỵ";
+"detail_should" = "Nên";
+"detail_avoid" = "Kiêng kỵ";
+"detail_leap_suffix" = "(nhuận)";
+
+/* Evaluation keys from engine */
+"eval_wedding" = "cưới hỏi";
+"eval_groundbreaking" = "động thổ";
+"eval_opening_business" = "khai trương";
+"eval_funeral" = "tang lễ";
+"eval_travel" = "đi xa";
+"eval_construction" = "xây dựng";
+
+/* Profile */
+"profile_title" = "Hồ sơ âm lịch";
+"profile_add" = "Thêm";
+"profile_save" = "Lưu";
+"profile_delete" = "Xóa";
+"profile_name" = "Tên";
+"profile_birth_solar" = "Ngày sinh dương lịch";
+"profile_lunar_birth_format" = "Ngày sinh âm lịch:";
+"profile_compare" = "So sánh";
+"profile_compare_hint" = "Chọn hai hồ sơ để so sánh độ hợp.";
+"profile_compatibility_title" = "Độ hợp";
+"profile_compatibility_score" = "Điểm hợp: %d/100";
+"profile_strengths_title" = "Điểm mạnh";
+"profile_weaknesses_title" = "Điểm cần lưu ý";
+
+"profile_summary_excellent" = "Độ hợp rất cao, tiềm năng gắn bó dài lâu.";
+"profile_summary_good" = "Độ hợp tốt, tính cách bổ trợ nhau khá rõ.";
+"profile_summary_balanced" = "Độ hợp cân bằng, sẽ tốt hơn nếu giao tiếp rõ ràng.";
+"profile_summary_mixed" = "Độ hợp trung bình, cần kiên nhẫn và điều chỉnh.";
+"profile_summary_challenging" = "Độ hợp thử thách, nhưng vẫn có thể bền nếu cùng cố gắng.";
+"profile_strength_zodiac_strong" = "Con giáp hòa hợp mạnh";
+"profile_strength_zodiac_moderate" = "Nhịp con giáp tương đối đồng điệu";
+"profile_strength_element_strong" = "Ngũ hành hỗ trợ nhau tự nhiên";
+"profile_strength_element_moderate" = "Ngũ hành khá cân bằng";
+"profile_strength_base_stable" = "Nền tảng tương hợp ổn định";
+"profile_weakness_zodiac_conflict" = "Phong cách con giáp có thể xung khắc";
+"profile_weakness_element_conflict" = "Năng lượng ngũ hành cần thêm dung hòa";
+"profile_weakness_no_major" = "Không có điểm xung khắc lớn";
+"profile_insights_title" = "Gợi ý tính cách";
+
+"element_traits_title" = "Tính cách";
+"element_strengths_title" = "Điểm mạnh";
+"element_weaknesses_title" = "Điểm cần lưu ý";
+"element_compatible_title" = "Hợp";
+"element_incompatible_title" = "Khắc";
+"element_suggestions_title" = "Gợi ý";
+
+"profile_element_title" = "Mệnh của bạn";
+"profile_basic_element_label" = "Ngũ hành";
+"profile_napam_label" = "Nạp âm";
