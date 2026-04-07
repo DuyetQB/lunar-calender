@@ -39,7 +39,11 @@ final class UNNotificationScheduler: ReminderNotificationScheduling {
         let content = UNMutableNotificationContent()
         content.title = request.title
         content.body = request.body
-        content.sound = .default
+        content.sound = AppNotificationSoundPreference.current().notificationSound()
+        content.badge = 1
+        if #available(iOS 15.0, *) {
+            content.interruptionLevel = .timeSensitive
+        }
         var cal = Calendar(identifier: .gregorian)
         cal.timeZone = LunarReminderConverter.vietnamTimeZone
         let comps = cal.dateComponents([.year, .month, .day, .hour, .minute, .second], from: request.fireDate)

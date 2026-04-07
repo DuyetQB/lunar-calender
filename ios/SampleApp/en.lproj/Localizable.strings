@@ -43,6 +43,13 @@
 "settings_reminders_section" = "Lunar reminders";
 "settings_reminders_footer" = "Mùng 1 and rằm use the Vietnamese lunar calendar (Vietnam time). Allow notifications when prompted. Tap below if alerts look out of date.";
 "settings_reminders_reschedule" = "Refresh notifications for this year";
+
+"settings_notification_sound_section" = "Notification sound";
+"settings_notification_sound_label" = "Reminder sound";
+"settings_notification_sound_default" = "Default alert";
+"settings_notification_sound_ringtone" = "Default ringtone";
+"settings_notification_sound_silent" = "Silent (no sound)";
+"settings_notification_sound_footer" = "Used for calendar note reminders and lunar reminders. Changing this refreshes pending alerts so the new sound applies.";
 "settings_reminder_repeat_monthly" = "Every lunar month";
 "settings_reminder_repeat_yearly" = "Once per year";
 
@@ -75,6 +82,10 @@
 "detail_should" = "Favorable";
 "detail_avoid" = "Avoid";
 "detail_leap_suffix" = "(leap)";
+
+"detail_notes_section" = "Your notes";
+"detail_notes_empty" = "No notes for this day. Tap the note button to add one.";
+"detail_notes_manage" = "Edit";
 
 /* Evaluation keys from engine */
 "eval_wedding" = "weddings";
@@ -124,3 +135,25 @@
 "profile_element_title" = "Your element";
 "profile_basic_element_label" = "Five Elements";
 "profile_napam_label" = "Na Am";
+
+/* Notes */
+"notes_section_note" = "Note";
+"notes_title_placeholder" = "Title";
+"notes_section_reminder" = "Reminder";
+"notes_section_date" = "Date";
+"notes_selected_solar" = "Solar date";
+"notes_selected_lunar" = "Lunar date";
+"notes_enable_reminder" = "Enable reminder";
+"notes_reminder_time" = "Reminder time";
+"notes_repeat_lunar_yearly" = "Repeat by lunar date every year";
+"notes_reminder_helper" = "At the reminder time, the app sends a notification with sound. Keep notifications enabled in Settings.";
+"notes_new_title" = "New Note";
+"notes_edit_title" = "Edit Note";
+"notes_cancel" = "Cancel";
+"notes_save" = "Save";
+"notes_section_list" = "Notes";
+"notes_list_title" = "Calendar Notes";
+"notes_empty_title" = "No notes for this date";
+"notes_empty_subtitle" = "Tap + to add a note and reminder.";
+"notes_lunar_repeat_badge" = "Lunar yearly";
+"notes_notification_default_body" = "You have a note today.";

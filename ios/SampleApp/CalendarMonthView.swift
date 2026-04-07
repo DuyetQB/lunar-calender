@@ -10,6 +10,7 @@ struct CalendarMonthView: View {
     @Environment(\.appThemeColors) private var theme
     @Environment(\.locale) private var locale
     @Environment(\.colorScheme) private var colorScheme
+    @EnvironmentObject private var noteStore: NoteStore
     @State private var year: Int
     @State private var month: Int
     private let engine = LunarEngine()
@@ -112,8 +113,10 @@ struct CalendarMonthView: View {
                     let solar = SolarDate(year: year, month: month, day: d)
                     let isToday = year == t.year && month == t.month && d == t.day
                     let isHoangDao = engine.isHoangDao(date: solar)
+                    let hasNotes = noteStore.hasNotes(on: toDate(from: solar))
+                    let hasReminder = noteStore.hasReminders(on: toDate(from: solar))
                     NavigationLink(destination: DetailView(solar: solar, engine: engine)) {
-                        dayCell(day: d, solar: solar, isToday: isToday, isHoangDao: isHoangDao)
+                        dayCell(day: d, solar: solar, isToday: isToday, isHoangDao: isHoangDao, hasNotes: hasNotes, hasReminder: hasReminder)
                     }
                     .buttonStyle(.plain)
                 } else {
@@ -127,27 +130,47 @@ struct CalendarMonthView: View {
     }
 
     @available(iOS 16.0, *)
-    private func dayCell(day: Int, solar: SolarDate, isToday: Bool, isHoangDao: Bool) -> some View {
-        VStack(spacing: 4) {
-            ZStack(alignment: .topTrailing) {
-                if #available(iOS 16.0, *) {
-                    Text("\(day)")
-                        .font(.system(.body, design: .rounded, weight: isToday ? .bold : .medium))
-                        .foregroundStyle(isToday ? theme.primary : .primary)
-                } else {
-                    // Fallback on earlier versions
+    private func dayCell(day: Int, solar: SolarDate, isToday: Bool, isHoangDao: Bool, hasNotes: Bool, hasReminder: Bool) -> some View {
+        HStack(alignment: .center, spacing: 2) {
+            VStack(spacing: 4) {
+                ZStack(alignment: .topTrailing) {
+                    if #available(iOS 16.0, *) {
+                        Text("\(day)")
+                            .font(.system(.body, design: .rounded, weight: isToday ? .bold : .medium))
+                            .foregroundStyle(isToday ? theme.primary : .primary)
+                    } else {
+                        // Fallback on earlier versions
+                    }
+                    if isHoangDao {
+                        Circle()
+                            .fill(theme.hoangDao)
+                            .frame(width: 5, height: 5)
+                            .offset(x: 2, y: -2)
+                    }
                 }
-                if isHoangDao {
+                Text("\(engine.solarToLunar(date: solar).day)")
+                    .font(.system(size: 11, design: .rounded))
+                    .foregroundStyle(.secondary)
+                if hasNotes {
                     Circle()
-                        .fill(theme.hoangDao)
+                        .fill(theme.primary)
                         .frame(width: 5, height: 5)
-                        .offset(x: 2, y: -2)
+                } else {
+                    Color.clear.frame(width: 5, height: 5)
                 }
             }
-            Text("\(engine.solarToLunar(date: solar).day)")
-                .font(.system(size: 11, design: .rounded))
-                .foregroundStyle(.secondary)
+            .frame(maxWidth: .infinity)
+
+            if hasReminder {
+                Image(systemName: "bell.fill")
+                    .font(.system(size: 9, weight: .bold))
+                    .foregroundStyle(.orange)
+                    .frame(width: 14, alignment: .center)
+                    .accessibilityLabel(Text("notes_enable_reminder"))
+            }
         }
+        .padding(.leading, 6)
+        .padding(.trailing, 4)
         .frame(maxWidth: .infinity)
         .frame(height: 52)
         .background(
@@ -156,7 +179,7 @@ struct CalendarMonthView: View {
         )
         .overlay(
             RoundedRectangle(cornerRadius: 12)
-                .stroke(isToday ? theme.todayRing : Color.clear, lineWidth: 2)
+                .stroke(isToday ? theme.todayRing : (hasReminder ? Color.orange : Color.clear), lineWidth: hasReminder ? 2 : 0)
         )
         .shadow(color: .black.opacity(isToday ? 0.08 : 0.04), radius: isToday ? 4 : 2, x: 0, y: 1)
     }
@@ -191,5 +214,12 @@ struct CalendarMonthView: View {
 
     private func firstWeekdayOfMonth() -> Int {
         engine.firstWeekdayOfMonth(year: year, month: month)
+    }
+
+    private func toDate(from solar: SolarDate) -> Date {
+        var cal = Calendar(identifier: .gregorian)
+        cal.timeZone = LunarReminderConverter.vietnamTimeZone
+        let comps = DateComponents(year: solar.year, month: solar.month, day: solar.day, hour: 12, minute: 0)
+        return cal.date(from: comps) ?? Date()
     }
 }

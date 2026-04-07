@@ -17,9 +17,32 @@ final class ReminderService {
         self.notifier = notifier
     }
 
+    // MARK: - Calendar notes API
+
+    func requestPermission() {
+        Task {
+            _ = await requestNotificationPermission()
+        }
+    }
+
+    func schedule(note: CalendarNote) {
+        guard note.hasReminder else { return }
+        guard let date = nextFireDate(for: note, from: Date()) else { return }
+        let body = note.content.isEmpty ? NSLocalizedString("notes_notification_default_body", comment: "") : note.content
+        scheduleNotification(date: date, title: note.title, body: body, identifier: noteNotificationIdentifier(note.id))
+    }
+
+    func cancel(note: CalendarNote) {
+        notifier.removePendingNotifications(withIdentifiers: [noteNotificationIdentifier(note.id)])
+    }
+
     @discardableResult
     func requestNotificationPermission() async -> Bool {
         await notifier.requestAuthorizationIfNeeded()
+    }
+
+    func scheduleNotification(date: Date, title: String, body: String) {
+        scheduleNotification(date: date, title: title, body: body, identifier: UUID().uuidString)
     }
 
     // MARK: - scheduleReminder(reminder:)
@@ -133,5 +156,38 @@ final class ReminderService {
     private func notificationBody(solar: SolarDate, reminder: Reminder) -> String {
         let lunar = engine.solarToLunar(date: solar)
         return "Âm lịch \(lunar.day)/\(lunar.month)/\(lunar.year) · Dương \(solar.day)/\(solar.month)/\(solar.year)"
+    }
+
+    private func noteNotificationIdentifier(_ id: UUID) -> String {
+        "calendar.note.\(id.uuidString)"
+    }
+
+    private func scheduleNotification(date: Date, title: String, body: String, identifier: String) {
+        notifier.add(ReminderNotificationRequest(identifier: identifier, title: title, body: body, fireDate: date))
+    }
+
+    private func nextFireDate(for note: CalendarNote, from now: Date) -> Date? {
+        if note.isLunarRepeat, let lunarDate = note.lunarDate {
+            var cal = Calendar(identifier: .gregorian)
+            cal.timeZone = LunarReminderConverter.vietnamTimeZone
+            let hour = cal.component(.hour, from: note.reminderDate ?? note.solarDate)
+            let minute = cal.component(.minute, from: note.reminderDate ?? note.solarDate)
+            let currentYear = cal.component(.year, from: now)
+            for year in currentYear...(currentYear + 2) where LunarEngine.supportedYearRange.contains(year) {
+                guard let date = LunarReminderConverter.convertLunarToSolar(
+                    lunarDay: lunarDate.day,
+                    lunarMonth: lunarDate.month,
+                    year: year,
+                    isLeapMonth: lunarDate.isLeapMonth,
+                    hour: hour,
+                    minute: minute,
+                    engine: engine
+                ) else { continue }
+                if date > now { return date }
+            }
+            return nil
+        }
+        let fire = note.reminderDate ?? note.solarDate
+        return fire > now ? fire : nil
     }
 }

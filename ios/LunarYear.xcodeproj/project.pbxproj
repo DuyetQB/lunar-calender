@@ -24,6 +24,7 @@
 		RM0004 /* ReminderNotificationPort.swift in Sources */ = {isa = PBXBuildFile; fileRef = RM0014 /* ReminderNotificationPort.swift */; };
 		RM0005 /* ReminderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = RM0015 /* ReminderService.swift */; };
 		RM0006 /* ReminderStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = RM0016 /* ReminderStore.swift */; };
+		RM0007 /* AppNotificationSoundPreference.swift in Sources */ = {isa = PBXBuildFile; fileRef = RM0017 /* AppNotificationSoundPreference.swift */; };
 		PR0001 /* ProfileModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = PR0011 /* ProfileModels.swift */; };
 		PR0002 /* LunarProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = PR0012 /* LunarProfileService.swift */; };
 		PR0003 /* ProfileStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = PR0013 /* ProfileStore.swift */; };
@@ -32,6 +33,10 @@
 		PR0006 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = PR0016 /* ProfileView.swift */; };
 		PR0007 /* LunarService.swift in Sources */ = {isa = PBXBuildFile; fileRef = PR0017 /* LunarService.swift */; };
 		PR0008 /* ElementService.swift in Sources */ = {isa = PBXBuildFile; fileRef = PR0018 /* ElementService.swift */; };
+		NS0001 /* CalendarNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = NS0011 /* CalendarNote.swift */; };
+		NS0002 /* NoteStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = NS0012 /* NoteStore.swift */; };
+		NS0003 /* NoteEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = NS0013 /* NoteEditorView.swift */; };
+		NS0004 /* NoteListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = NS0014 /* NoteListView.swift */; };
 		WG0006 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0014 /* Theme.swift */; };
 		LC0001 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = LC0011 /* Models.swift */; };
 		LC0002 /* JulianDateConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = LC0012 /* JulianDateConverter.swift */; };
@@ -122,6 +127,7 @@
 		RM0014 /* ReminderNotificationPort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderNotificationPort.swift; sourceTree = "<group>"; };
 		RM0015 /* ReminderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderService.swift; sourceTree = "<group>"; };
 		RM0016 /* ReminderStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderStore.swift; sourceTree = "<group>"; };
+		RM0017 /* AppNotificationSoundPreference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNotificationSoundPreference.swift; sourceTree = "<group>"; };
 		PR0011 /* ProfileModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModels.swift; sourceTree = "<group>"; };
 		PR0012 /* LunarProfileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunarProfileService.swift; sourceTree = "<group>"; };
 		PR0013 /* ProfileStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileStore.swift; sourceTree = "<group>"; };
@@ -130,6 +136,10 @@
 		PR0016 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		PR0017 /* LunarService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunarService.swift; sourceTree = "<group>"; };
 		PR0018 /* ElementService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementService.swift; sourceTree = "<group>"; };
+		NS0011 /* CalendarNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarNote.swift; sourceTree = "<group>"; };
+		NS0012 /* NoteStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteStore.swift; sourceTree = "<group>"; };
+		NS0013 /* NoteEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteEditorView.swift; sourceTree = "<group>"; };
+		NS0014 /* NoteListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListView.swift; sourceTree = "<group>"; };
 		AA0021 /* LunarYear.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LunarYear.entitlements; sourceTree = "<group>"; };
 		LC0011 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		LC0012 /* JulianDateConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JulianDateConverter.swift; sourceTree = "<group>"; };
@@ -204,6 +214,7 @@
 				AS0011 /* Assets.xcassets */,
 				WD0090 /* Widget */,
 				RM0090 /* Reminder */,
+				NS0090 /* Notes */,
 				PR0090 /* Profile */,
 				AA0021 /* LunarYear.entitlements */,
 				LOC001 /* Localizable.strings */,
@@ -274,6 +285,7 @@
 				RM0014 /* ReminderNotificationPort.swift */,
 				RM0015 /* ReminderService.swift */,
 				RM0016 /* ReminderStore.swift */,
+				RM0017 /* AppNotificationSoundPreference.swift */,
 			);
 			path = Features/Reminder;
 			sourceTree = "<group>";
@@ -291,6 +303,17 @@
 				PR0018 /* ElementService.swift */,
 			);
 			path = Features/Profile;
+			sourceTree = "<group>";
+		};
+		NS0090 /* Notes */ = {
+			isa = PBXGroup;
+			children = (
+				NS0011 /* CalendarNote.swift */,
+				NS0012 /* NoteStore.swift */,
+				NS0013 /* NoteEditorView.swift */,
+				NS0014 /* NoteListView.swift */,
+			);
+			path = Features/Notes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -424,6 +447,7 @@
 				RM0004 /* ReminderNotificationPort.swift in Sources */,
 				RM0005 /* ReminderService.swift in Sources */,
 				RM0006 /* ReminderStore.swift in Sources */,
+				RM0007 /* AppNotificationSoundPreference.swift in Sources */,
 				PR0001 /* ProfileModels.swift in Sources */,
 				PR0002 /* LunarProfileService.swift in Sources */,
 				PR0003 /* ProfileStore.swift in Sources */,
@@ -432,6 +456,10 @@
 				PR0006 /* ProfileView.swift in Sources */,
 				PR0007 /* LunarService.swift in Sources */,
 				PR0008 /* ElementService.swift in Sources */,
+				NS0001 /* CalendarNote.swift in Sources */,
+				NS0002 /* NoteStore.swift in Sources */,
+				NS0003 /* NoteEditorView.swift in Sources */,
+				NS0004 /* NoteListView.swift in Sources */,
 				WDA001 /* WidgetDataModels.swift in Sources */,
 				WDA002 /* SunTimeCalculator.swift in Sources */,
 				WDA003 /* ZodiacCatalog.swift in Sources */,

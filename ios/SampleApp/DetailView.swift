@@ -9,11 +9,14 @@ import SwiftUI
 struct DetailView: View {
     @Environment(\.appThemeColors) private var theme
     @Environment(\.locale) private var locale
+    @EnvironmentObject private var noteStore: NoteStore
     let solar: SolarDate
     let engine: LunarEngine
+    @State private var showingNotes = false
 
     var body: some View {
         let lunar = engine.solarToLunar(date: solar)
+        let dayNotes = noteStore.notes(for: solarAsDate())
         let canChi = engine.canChi(date: solar)
         let hoangDao = engine.isHoangDao(date: solar)
         let hours = engine.goodHours(date: solar)
@@ -23,6 +26,7 @@ struct DetailView: View {
         ScrollView {
             VStack(alignment: .leading, spacing: 20) {
                 headerCard(solar: solar, lunar: lunar, term: term)
+                notesSummaryCard(notes: dayNotes)
                 hoangDaoCard(hoangDao: hoangDao, hours: hours)
                 canChiCard(canChi: canChi)
                 evaluationCard(goodFor: goodFor, avoidFor: avoidFor)
@@ -32,10 +36,109 @@ struct DetailView: View {
         .background(theme.cardBackground.opacity(0.8))
         .navigationTitle(dateTitle(solar))
         .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            ToolbarItem(placement: .topBarTrailing) {
+                Button {
+                    showingNotes = true
+                } label: {
+                    ZStack(alignment: .topTrailing) {
+                        Image(systemName: "note.text.badge.plus")
+                        if !dayNotes.isEmpty {
+                            Circle()
+                                .fill(Color.orange)
+                                .frame(width: 8, height: 8)
+                                .offset(x: 4, y: -4)
+                        }
+                    }
+                }
+                .accessibilityLabel(Text("notes_list_title"))
+            }
+        }
+        .sheet(isPresented: $showingNotes) {
+            NavigationStack {
+                NoteListView(
+                    selectedSolarDate: solarAsDate(),
+                    selectedLunarDate: engine.solarToLunar(date: solar)
+                )
+            }
+        }
     }
 
     private func dateTitle(_ solar: SolarDate) -> String {
         "\(solar.day)/\(solar.month)/\(solar.year)"
+    }
+
+    private func notesSummaryCard(notes: [CalendarNote]) -> some View {
+        VStack(alignment: .leading, spacing: 12) {
+            HStack {
+                Image(systemName: "note.text")
+                    .foregroundStyle(theme.primary)
+                Text("detail_notes_section")
+                    .font(.headline)
+                Spacer()
+                Button {
+                    showingNotes = true
+                } label: {
+                    Text("detail_notes_manage")
+                        .font(.subheadline.weight(.semibold))
+                        .foregroundStyle(theme.primary)
+                }
+            }
+            if notes.isEmpty {
+                Text("detail_notes_empty")
+                    .font(.subheadline)
+                    .foregroundStyle(.secondary)
+            } else {
+                ForEach(Array(notes.enumerated()), id: \.element.id) { index, note in
+                    VStack(alignment: .leading, spacing: 6) {
+                        Text(note.title)
+                            .font(.subheadline.weight(.semibold))
+                            .foregroundStyle(.primary)
+                        if !note.content.isEmpty {
+                            Text(note.content)
+                                .font(.subheadline)
+                                .foregroundStyle(.secondary)
+                                .lineLimit(5)
+                                .fixedSize(horizontal: false, vertical: true)
+                        }
+                        if note.hasReminder, let reminderDate = note.reminderDate {
+                            HStack(spacing: 6) {
+                                Image(systemName: "bell.fill")
+                                    .font(.caption2)
+                                Text(reminderDate.formatted(date: .abbreviated, time: .shortened))
+                                    .font(.caption.weight(.medium))
+                                if note.isLunarRepeat {
+                                    Text("notes_lunar_repeat_badge")
+                                        .font(.caption2.weight(.semibold))
+                                        .padding(.horizontal, 6)
+                                        .padding(.vertical, 2)
+                                        .background(Color.orange.opacity(0.18))
+                                        .foregroundStyle(.orange)
+                                        .clipShape(Capsule())
+                                }
+                            }
+                            .foregroundStyle(.orange)
+                        }
+                    }
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    if index < notes.count - 1 {
+                        Divider().padding(.vertical, 4)
+                    }
+                }
+            }
+        }
+        .padding(16)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .background(Color(.systemBackground))
+        .overlay(
+            RoundedRectangle(cornerRadius: 16)
+                .stroke(
+                    notes.isEmpty ? Color.clear : theme.primary.opacity(0.35),
+                    lineWidth: notes.isEmpty ? 0 : 1.5
+                )
+        )
+        .clipShape(RoundedRectangle(cornerRadius: 16))
+        .shadow(color: .black.opacity(0.06), radius: 8, x: 0, y: 2)
     }
 
     private func headerCard(solar: SolarDate, lunar: LunarDate, term: String) -> some View {
@@ -227,5 +330,12 @@ struct DetailView: View {
             return NSLocalizedString(key, bundle: .main, comment: "")
         }
         return NSLocalizedString(key, bundle: bundle, comment: "")
+    }
+
+    private func solarAsDate() -> Date {
+        var cal = Calendar(identifier: .gregorian)
+        cal.timeZone = LunarReminderConverter.vietnamTimeZone
+        let comps = DateComponents(year: solar.year, month: solar.month, day: solar.day, hour: 12, minute: 0)
+        return cal.date(from: comps) ?? Date()
     }
 }

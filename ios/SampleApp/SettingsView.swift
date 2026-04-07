@@ -11,6 +11,8 @@ struct SettingsView: View {
     @EnvironmentObject private var language: AppLanguageManager
     @EnvironmentObject private var themeManager: ThemeManager
     @EnvironmentObject private var reminderStore: ReminderStore
+    @EnvironmentObject private var noteStore: NoteStore
+    @AppStorage(SharedConfig.notificationSoundPreferenceKey) private var notificationSoundRaw = AppNotificationSoundPreference.systemDefault.rawValue
 
     var body: some View {
         NavigationStack {
@@ -38,6 +40,25 @@ struct SettingsView: View {
                     Text("settings_reminders_section")
                 } footer: {
                     Text("settings_reminders_footer")
+                }
+
+                Section {
+                    Picker(selection: notificationSoundBinding) {
+                        ForEach(AppNotificationSoundPreference.allCases) { option in
+                            Text(LocalizedStringKey(option.titleKey)).tag(option)
+                        }
+                    } label: {
+                        Label {
+                            Text("settings_notification_sound_label")
+                        } icon: {
+                            Image(systemName: "bell.badge.fill")
+                        }
+                    }
+                    .pickerStyle(.navigationLink)
+                } header: {
+                    Text("settings_notification_sound_section")
+                } footer: {
+                    Text("settings_notification_sound_footer")
                 }
 
                 Section {
@@ -114,7 +135,18 @@ struct SettingsView: View {
                 }
             }
             .navigationTitle(Text("settings_title"))
+            .onChange(of: notificationSoundRaw) { _ in
+                noteStore.rescheduleAllNotes()
+                Task { await reminderStore.rescheduleAllForCurrentYear() }
+            }
         }
+    }
+
+    private var notificationSoundBinding: Binding<AppNotificationSoundPreference> {
+        Binding(
+            get: { AppNotificationSoundPreference(rawValue: notificationSoundRaw) ?? .systemDefault },
+            set: { notificationSoundRaw = $0.rawValue }
+        )
     }
 
     private func reminderSubtitle(_ r: Reminder) -> String {

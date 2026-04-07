@@ -43,6 +43,13 @@
 "settings_reminders_section" = "Nhắc âm lịch";
 "settings_reminders_footer" = "Mùng 1 và rằm theo lịch âm Việt Nam (giờ Việt Nam). Cho phép thông báo khi được hỏi. Chạm nút bên dưới nếu lịch nhắc không khớp.";
 "settings_reminders_reschedule" = "Làm mới thông báo trong năm nay";
+
+"settings_notification_sound_section" = "Âm thanh thông báo";
+"settings_notification_sound_label" = "Nhạc chuông nhắc";
+"settings_notification_sound_default" = "Chuông mặc định";
+"settings_notification_sound_ringtone" = "Nhạc chuông hệ thống";
+"settings_notification_sound_silent" = "Im lặng (không âm thanh)";
+"settings_notification_sound_footer" = "Dùng cho nhắc ghi chú lịch và nhắc âm lịch. Đổi tùy chọn sẽ làm mới thông báo đang chờ để áp dụng âm thanh mới.";
 "settings_reminder_repeat_monthly" = "Mỗi tháng âm lịch";
 "settings_reminder_repeat_yearly" = "Một lần mỗi năm";
 
@@ -75,6 +82,10 @@
 "detail_should" = "Nên";
 "detail_avoid" = "Kiêng kỵ";
 "detail_leap_suffix" = "(nhuận)";
+
+"detail_notes_section" = "Ghi chú của bạn";
+"detail_notes_empty" = "Chưa có ghi chú cho ngày này. Nhấn nút ghi chú để thêm.";
+"detail_notes_manage" = "Sửa";
 
 /* Evaluation keys from engine */
 "eval_wedding" = "cưới hỏi";
@@ -124,3 +135,25 @@
 "profile_element_title" = "Mệnh của bạn";
 "profile_basic_element_label" = "Ngũ hành";
 "profile_napam_label" = "Nạp âm";
+
+/* Notes */
+"notes_section_note" = "Ghi chú";
+"notes_title_placeholder" = "Tiêu đề";
+"notes_section_reminder" = "Nhắc nhở";
+"notes_section_date" = "Ngày";
+"notes_selected_solar" = "Ngày dương";
+"notes_selected_lunar" = "Ngày âm";
+"notes_enable_reminder" = "Bật nhắc nhở";
+"notes_reminder_time" = "Thời gian nhắc";
+"notes_repeat_lunar_yearly" = "Lặp theo ngày âm mỗi năm";
+"notes_reminder_helper" = "Đến giờ nhắc, ứng dụng sẽ gửi thông báo kèm âm thanh. Hãy bật thông báo trong Cài đặt.";
+"notes_new_title" = "Ghi chú mới";
+"notes_edit_title" = "Sửa ghi chú";
+"notes_cancel" = "Hủy";
+"notes_save" = "Lưu";
+"notes_section_list" = "Ghi chú";
+"notes_list_title" = "Ghi chú lịch";
+"notes_empty_title" = "Chưa có ghi chú cho ngày này";
+"notes_empty_subtitle" = "Nhấn + để tạo ghi chú và nhắc nhở.";
+"notes_lunar_repeat_badge" = "Lặp âm lịch";
+"notes_notification_default_body" = "Bạn có một ghi chú hôm nay.";
