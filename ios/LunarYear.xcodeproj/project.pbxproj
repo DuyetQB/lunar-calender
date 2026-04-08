@@ -81,6 +81,7 @@
 		WD000R1 /* zodiacData.json in Resources */ = {isa = PBXBuildFile; fileRef = WD0017 /* zodiacData.json */; };
 		WD000R2 /* zodiacData.json in Resources */ = {isa = PBXBuildFile; fileRef = WD0017 /* zodiacData.json */; };
 		WGT004 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = WGT001 /* Localizable.strings */; };
+		WPI004 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = WPI001 /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -168,6 +169,8 @@
 		WD0018 /* WidgetLocalized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetLocalized.swift; sourceTree = "<group>"; };
 		WGT002 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		WGT003 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Localizable.strings; sourceTree = "<group>"; };
+		WPI002 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		WPI003 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -256,6 +259,7 @@
 				WG0012 /* QuoteWidget.swift */,
 				WG0015 /* LunarWidget.swift */,
 				WGT001 /* Localizable.strings */,
+				WPI001 /* InfoPlist.strings */,
 				WG0013 /* LunarYearWidget.entitlements */,
 				WG0014 /* Info.plist */,
 			);
@@ -410,6 +414,7 @@
 			files = (
 				WD000R2 /* zodiacData.json in Resources */,
 				WGT004 /* Localizable.strings in Resources */,
+				WPI004 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -527,6 +532,15 @@
 			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
+		WPI001 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				WPI002 /* en */,
+				WPI003 /* vi */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -596,6 +610,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = "Âm Lịch";
 				INFOPLIST_KEY_UIApplicationScene_Manifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UIBackgroundModes = remote-notification;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -629,6 +644,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = "Âm Lịch";
 				INFOPLIST_KEY_UIApplicationScene_Manifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UIBackgroundModes = remote-notification;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

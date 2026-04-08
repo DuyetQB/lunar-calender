@@ -37,7 +37,7 @@
 "accent_sunset" = "Sunset";
 "accent_midnight" = "Midnight";
 "settings_widget_section" = "Home screen widget";
-"settings_widget_instructions" = "Touch and hold the Home Screen, tap Edit, then Add Widget. Search for “Lunar Year” and add Daily quote or Lunar day (small / medium / large). Accent comes from above; sunrise/sunset appear on the large Lunar day widget if coordinates are saved below.";
+"settings_widget_instructions" = "Touch and hold the Home Screen, tap Edit, then Add Widget. Search for “Lunar Calendar” or “Âm Lịch” and add Daily quote or Lunar day (small / medium / large). Accent comes from above; sunrise/sunset appear on the large Lunar day widget if coordinates are saved below.";
 "settings_widget_location_hcm" = "Use Ho Chi Minh City for widget sunrise/sunset";
 "settings_widget_location_clear" = "Clear saved coordinates";
 "settings_reminders_section" = "Lunar reminders";
@@ -59,9 +59,9 @@
 "widget_good_hours_section" = "Good hours";
 "widget_sunrise_sunset_format" = "%@ ↑  %@ ↓";
 "widget_lunar_day_title" = "Lunar day";
-"widget_lunar_day_description" = "Lunar and solar dates, quote, good hours, and a light zodiac hint. Sunrise and sunset appear when the app saves a location.";
+"widget_lunar_day_description" = "Lunar Calendar: lunar and solar dates, quote, good hours, and a light zodiac hint. Sunrise and sunset appear when the app saves a location.";
 "widget_daily_quote_title" = "Daily quote";
-"widget_daily_quote_description" = "Shows the same quote of the day as in the app.";
+"widget_daily_quote_description" = "Lunar Calendar: the same quote of the day as in the app.";
 "widget_quote_header" = "Quote of the day";
 
 /* Calendar */

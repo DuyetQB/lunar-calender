@@ -37,7 +37,7 @@
 "accent_sunset" = "Hoàng hôn";
 "accent_midnight" = "Nửa đêm";
 "settings_widget_section" = "Widget màn hình chính";
-"settings_widget_instructions" = "Chạm giữ màn hình chính, chọn Sửa, rồi Thêm widget. Tìm “Lunar Year” và chọn Daily quote hoặc Lunar day (nhỏ / vừa / lớn). Màu nhấn lấy ở trên; mặt trời mọc/lặn hiện trên widget Lunar day cỡ lớn khi đã lưu tọa độ bên dưới.";
+"settings_widget_instructions" = "Chạm giữ màn hình chính, chọn Sửa, rồi Thêm widget. Tìm “Âm Lịch” hoặc “Lunar Calendar” và chọn Daily quote hoặc Lunar day (nhỏ / vừa / lớn). Màu nhấn lấy ở trên; mặt trời mọc/lặn hiện trên widget Lunar day cỡ lớn khi đã lưu tọa độ bên dưới.";
 "settings_widget_location_hcm" = "Dùng TP. Hồ Chí Minh cho mặt trời mọc/lặn trên widget";
 "settings_widget_location_clear" = "Xóa tọa độ đã lưu";
 "settings_reminders_section" = "Nhắc âm lịch";
@@ -59,9 +59,9 @@
 "widget_good_hours_section" = "Giờ hoàng đạo";
 "widget_sunrise_sunset_format" = "%@ ↑  %@ ↓";
 "widget_lunar_day_title" = "Ngày âm lịch";
-"widget_lunar_day_description" = "Ngày âm/dương lịch, câu chuyện, giờ hoàng đạo và gợi ý tử vi nhẹ. Mặt trời mọc/lặn khi ứng dụng đã lưu vị trí.";
+"widget_lunar_day_description" = "Âm Lịch: ngày âm/dương lịch, câu chuyện, giờ hoàng đạo và gợi ý tử vi nhẹ. Mặt trời mọc/lặn khi ứng dụng đã lưu vị trí.";
 "widget_daily_quote_title" = "Câu chuyện trong ngày";
-"widget_daily_quote_description" = "Hiển thị cùng câu chuyện trong ngày như trong ứng dụng.";
+"widget_daily_quote_description" = "Âm Lịch: cùng câu chuyện trong ngày như trong ứng dụng.";
 "widget_quote_header" = "Câu chuyện trong ngày";
 
 /* Calendar */
