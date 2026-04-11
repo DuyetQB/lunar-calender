@@ -115,17 +115,15 @@ struct SettingsView: View {
                         .fixedSize(horizontal: false, vertical: true)
 
                     Button {
-                        let d = UserDefaults(suiteName: SharedConfig.appGroupId)
-                        d?.set(10.8231, forKey: SharedConfig.widgetLatitudeKey)
-                        d?.set(106.6297, forKey: SharedConfig.widgetLongitudeKey)
+                        AppGroupPreferences.set(10.8231, forKey: SharedConfig.widgetLatitudeKey)
+                        AppGroupPreferences.set(106.6297, forKey: SharedConfig.widgetLongitudeKey)
                         WidgetCenter.shared.reloadAllTimelines()
                     } label: {
                         Text("settings_widget_location_hcm")
                     }
                     Button(role: .destructive) {
-                        let d = UserDefaults(suiteName: SharedConfig.appGroupId)
-                        d?.removeObject(forKey: SharedConfig.widgetLatitudeKey)
-                        d?.removeObject(forKey: SharedConfig.widgetLongitudeKey)
+                        AppGroupPreferences.removeObject(forKey: SharedConfig.widgetLatitudeKey)
+                        AppGroupPreferences.removeObject(forKey: SharedConfig.widgetLongitudeKey)
                         WidgetCenter.shared.reloadAllTimelines()
                     } label: {
                         Text("settings_widget_location_clear")

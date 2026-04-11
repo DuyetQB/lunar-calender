@@ -5,6 +5,7 @@
 
 import Foundation
 import SwiftUI
+import UIKit
 
 struct DetailView: View {
     @Environment(\.appThemeColors) private var theme
@@ -13,6 +14,8 @@ struct DetailView: View {
     let solar: SolarDate
     let engine: LunarEngine
     @State private var showingNotes = false
+    @State private var pendingHolidayReminder: Holiday?
+    private let reminderService = ReminderService()
 
     var body: some View {
         let lunar = engine.solarToLunar(date: solar)
@@ -27,6 +30,9 @@ struct DetailView: View {
             VStack(alignment: .leading, spacing: 20) {
                 headerCard(solar: solar, lunar: lunar, term: term)
                 notesSummaryCard(notes: dayNotes)
+                if let holiday = pendingHolidayReminder {
+                    holidayReminderCard(holiday: holiday)
+                }
                 hoangDaoCard(hoangDao: hoangDao, hours: hours)
                 canChiCard(canChi: canChi)
                 evaluationCard(goodFor: goodFor, avoidFor: avoidFor)
@@ -36,6 +42,14 @@ struct DetailView: View {
         .background(theme.cardBackground.opacity(0.8))
         .navigationTitle(dateTitle(solar))
         .navigationBarTitleDisplayMode(.inline)
+        .task(id: solar.id) {
+            pendingHolidayReminder = await reminderService.holidayWithPendingReminder(on: solar)
+        }
+        .onReceive(NotificationCenter.default.publisher(for: UIApplication.willEnterForegroundNotification)) { _ in
+            Task {
+                pendingHolidayReminder = await reminderService.holidayWithPendingReminder(on: solar)
+            }
+        }
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
                 Button {
@@ -136,6 +150,36 @@ struct DetailView: View {
                     notes.isEmpty ? Color.clear : theme.primary.opacity(0.35),
                     lineWidth: notes.isEmpty ? 0 : 1.5
                 )
+        )
+        .clipShape(RoundedRectangle(cornerRadius: 16))
+        .shadow(color: .black.opacity(0.06), radius: 8, x: 0, y: 2)
+    }
+
+    private func holidayReminderCard(holiday: Holiday) -> some View {
+        VStack(alignment: .leading, spacing: 10) {
+            HStack(spacing: 8) {
+                Image(systemName: "gift.fill")
+                    .foregroundStyle(theme.primary)
+                Text("detail_holiday_reminder_title")
+                    .font(.headline)
+            }
+            Text(holiday.name)
+                .font(.subheadline.weight(.semibold))
+                .foregroundStyle(.primary)
+            HStack(spacing: 6) {
+                Image(systemName: "bell.fill")
+                    .font(.caption2)
+                Text("detail_holiday_reminder_time")
+                    .font(.caption.weight(.medium))
+            }
+            .foregroundStyle(theme.primary)
+        }
+        .padding(16)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .background(Color(.systemBackground))
+        .overlay(
+            RoundedRectangle(cornerRadius: 16)
+                .stroke(theme.primary.opacity(0.45), lineWidth: 1.5)
         )
         .clipShape(RoundedRectangle(cornerRadius: 16))
         .shadow(color: .black.opacity(0.06), radius: 8, x: 0, y: 2)

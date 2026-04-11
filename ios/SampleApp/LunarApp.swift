@@ -9,13 +9,20 @@ import SwiftUI
 import UIKit
 import UserNotifications
 
+/// Remote push + `UIBackgroundModes` / `remote-notification` are **off** until you re-enable provisioning and flip this flag.
+private enum RemotePushBackgroundConfig {
+    static let enabled = false
+}
+
 final class AppNotificationDelegate: NSObject, UIApplicationDelegate, UNUserNotificationCenterDelegate {
     func application(
         _ application: UIApplication,
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil
     ) -> Bool {
         UNUserNotificationCenter.current().delegate = self
-        application.registerForRemoteNotifications()
+        if RemotePushBackgroundConfig.enabled {
+            application.registerForRemoteNotifications()
+        }
         return true
     }
 
@@ -41,6 +48,7 @@ final class AppNotificationDelegate: NSObject, UIApplicationDelegate, UNUserNoti
         _ application: UIApplication,
         didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data
     ) {
+        guard RemotePushBackgroundConfig.enabled else { return }
         #if DEBUG
         let hex = deviceToken.map { String(format: "%02.2hhx", $0) }.joined()
         print("APNs device token: \(hex)")
@@ -51,6 +59,7 @@ final class AppNotificationDelegate: NSObject, UIApplicationDelegate, UNUserNoti
         _ application: UIApplication,
         didFailToRegisterForRemoteNotificationsWithError error: Error
     ) {
+        guard RemotePushBackgroundConfig.enabled else { return }
         #if DEBUG
         print("APNs registration failed: \(error.localizedDescription)")
         #endif
@@ -62,6 +71,10 @@ final class AppNotificationDelegate: NSObject, UIApplicationDelegate, UNUserNoti
         didReceiveRemoteNotification userInfo: [AnyHashable: Any],
         fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void
     ) {
+        guard RemotePushBackgroundConfig.enabled else {
+            completionHandler(.noData)
+            return
+        }
         completionHandler(.noData)
     }
 }

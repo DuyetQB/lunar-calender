@@ -35,7 +35,7 @@ public struct SolarDate: Sendable, Equatable, Hashable, Identifiable {
 
 /// Vietnamese lunar calendar date.
 /// Month 1 is the month containing Lập Xuân (Beginning of Spring).
-public struct LunarDate: Sendable, Equatable, Hashable {
+public struct LunarDate: Sendable, Equatable, Hashable, Codable {
     public var year: Int
     public var month: Int   // 1–12 (sometimes 1–13 with leap)
     public var day: Int     // 1–29 or 1–30

@@ -53,8 +53,7 @@ final class ThemeManager: ObservableObject {
     }
 
     private static func loadAccent() -> AccentTheme {
-        if let suite = UserDefaults(suiteName: SharedConfig.appGroupId),
-           let raw = suite.string(forKey: SharedConfig.themeAccentKey),
+        if let raw = AppGroupPreferences.string(forKey: SharedConfig.themeAccentKey),
            let v = AccentTheme(rawValue: raw) {
             return v
         }
@@ -66,8 +65,7 @@ final class ThemeManager: ObservableObject {
     }
 
     private static func loadAppearance() -> AppearanceMode {
-        if let suite = UserDefaults(suiteName: SharedConfig.appGroupId),
-           let raw = suite.string(forKey: SharedConfig.themeAppearanceKey),
+        if let raw = AppGroupPreferences.string(forKey: SharedConfig.themeAppearanceKey),
            let v = AppearanceMode(rawValue: raw) {
             return v
         }
@@ -81,9 +79,8 @@ final class ThemeManager: ObservableObject {
     private func persist() {
         UserDefaults.standard.set(accent.rawValue, forKey: SharedConfig.themeAccentKey)
         UserDefaults.standard.set(appearance.rawValue, forKey: SharedConfig.themeAppearanceKey)
-        let suite = UserDefaults(suiteName: SharedConfig.appGroupId)
-        suite?.set(accent.rawValue, forKey: SharedConfig.themeAccentKey)
-        suite?.set(appearance.rawValue, forKey: SharedConfig.themeAppearanceKey)
+        AppGroupPreferences.set(accent.rawValue, forKey: SharedConfig.themeAccentKey)
+        AppGroupPreferences.set(appearance.rawValue, forKey: SharedConfig.themeAppearanceKey)
         WidgetCenter.shared.reloadAllTimelines()
     }
 }

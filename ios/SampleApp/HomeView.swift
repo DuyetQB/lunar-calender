@@ -5,18 +5,24 @@
 
 import Foundation
 import SwiftUI
+import UIKit
 
 @available(iOS 16.0, *)
 struct HomeView: View {
     @Environment(\.appThemeColors) private var theme
     @Environment(\.locale) private var locale
     @Environment(\.colorScheme) private var colorScheme
+    @Environment(\.openURL) private var openURL
     @EnvironmentObject private var language: AppLanguageManager
 
     private let engine = LunarEngine()
+    private let holidayService = HolidayService()
 
     @State private var exploreDate: Date = Date()
     @State private var sheetSolar: SolarDate?
+    @State private var holidaySheet: Holiday?
+    @State private var holidayReminderFailure: HolidayReminderFailure?
+    @State private var holidayReminderScheduled = false
 
     private var vietnamCalendar: Calendar {
         var c = Calendar(identifier: .gregorian)
@@ -30,6 +36,7 @@ struct HomeView: View {
             ScrollView {
                 VStack(alignment: .leading, spacing: 24) {
                     todaySection
+                    
                     exploreSection
                     quoteSection
                 }
@@ -62,6 +69,73 @@ struct HomeView: View {
                         }
                 }
             }
+            .sheet(item: $holidaySheet) { holiday in
+                NavigationStack {
+                    HolidayDetailView(
+                        holiday: holiday,
+                        service: holidayService,
+                        onReminderSuccess: nil,
+                        onDismiss: { holidaySheet = nil }
+                    )
+                }
+            }
+            .alert(
+                "holiday_reminder_alert_title",
+                isPresented: Binding(
+                    get: { holidayReminderFailure != nil },
+                    set: { if !$0 { holidayReminderFailure = nil } }
+                )
+            ) {
+                if case .denied = holidayReminderFailure {
+                    Button("holiday_reminder_open_settings") {
+                        if let url = URL(string: UIApplication.openSettingsURLString) {
+                            openURL(url)
+                        }
+                        holidayReminderFailure = nil
+                    }
+                }
+                Button("home_close", role: .cancel) {
+                    holidayReminderFailure = nil
+                }
+            } message: {
+                switch holidayReminderFailure {
+                case .denied:
+                    Text("holiday_reminder_denied_message")
+                case .noOccurrence:
+                    Text("holiday_reminder_no_occurrence")
+                case .none:
+                    EmptyView()
+                }
+            }
+            .alert(
+                "holiday_reminder_scheduled_title",
+                isPresented: $holidayReminderScheduled
+            ) {
+                Button("home_close") { holidayReminderScheduled = false }
+            } message: {
+                Text("holiday_reminder_scheduled_message")
+            }
+        }
+    }
+
+    private enum HolidayReminderFailure {
+        case denied
+        case noOccurrence
+    }
+
+    private func scheduleHolidayReminder(for holiday: Holiday) {
+        Task {
+            let result = await holidayService.scheduleHolidayReminder(holiday: holiday)
+            await MainActor.run {
+                switch result {
+                case .scheduled:
+                    holidayReminderScheduled = true
+                case .denied:
+                    holidayReminderFailure = .denied
+                case .noOccurrence:
+                    holidayReminderFailure = .noOccurrence
+                }
+            }
         }
     }
 
@@ -78,6 +152,17 @@ struct HomeView: View {
                     sheetSolar = solar
                 }
         }
+    }
+
+    // MARK: - Upcoming holidays
+
+    private var upcomingHolidaySection: some View {
+        UpcomingHolidayCard(
+            holidays: holidayService.getUpcomingHolidays(from: Date()),
+            service: holidayService,
+            onRemind: { scheduleHolidayReminder(for: $0) },
+            onView: { holidaySheet = $0 }
+        )
     }
 
     // MARK: - Pick a date

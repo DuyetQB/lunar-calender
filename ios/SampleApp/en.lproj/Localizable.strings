@@ -157,3 +157,168 @@
 "notes_empty_subtitle" = "Tap + to add a note and reminder.";
 "notes_lunar_repeat_badge" = "Lunar yearly";
 "notes_notification_default_body" = "You have a note today.";
+
+/* Holidays */
+"holiday_section_title" = "Upcoming holidays";
+"holiday_empty" = "No upcoming holidays in the current window.";
+"holiday_countdown_format" = "%d days left";
+"holiday_date_line_format" = "Solar: %d/%d/%d · Lunar: %@";
+"holiday_remind_me" = "Remind me";
+"holiday_set_reminder" = "Set reminder";
+"holiday_reminder_alert_title" = "Holiday reminder";
+"holiday_reminder_denied_message" = "Notifications are turned off. Turn them on in Settings to get a reminder on the holiday.";
+"holiday_reminder_no_occurrence" = "No upcoming date was found for this holiday in the supported calendar range.";
+"holiday_reminder_open_settings" = "Open Settings";
+"holiday_reminder_scheduled_title" = "Reminder set";
+"holiday_reminder_scheduled_message" = "You will get a notification at 08:00 on that day (Vietnam time).";
+"detail_holiday_reminder_title" = "Holiday reminder";
+"detail_holiday_reminder_time" = "Notification at 08:00 (Vietnam time)";
+"calendar_holiday_reminder_a11y" = "Holiday reminder scheduled";
+"holiday_learn_more" = "Details";
+"holiday_home_banner_title" = "Next holiday";
+"holiday_card_section_title" = "Next holiday";
+"holiday_list_title" = "Vietnamese holidays";
+"holiday_see_all" = "See all holidays";
+"holiday_remind_me_short" = "Remind me";
+"holiday_fun_fact_heading" = "💡 Did you know?";
+"holiday_view_button" = "View";
+"holiday_card_more_format" = "+%d more";
+"holiday_lunar_format" = "Lunar · %@";
+"holiday_category_traditional" = "Traditional";
+"holiday_category_national" = "National";
+"holiday_category_spiritual" = "Spiritual";
+"holiday_category_buddhist" = "Buddhist";
+"holiday_category_folk" = "Folk";
+"holiday_category_modern" = "Modern";
+
+"holiday_tet_name" = "Tết Nguyên Đán";
+"holiday_tet_short" = "Lunar New Year — family reunion, ancestral worship.";
+"holiday_tet_desc" = "Tết Nguyên Đán marks the Vietnamese Lunar New Year. Families clean homes, prepare bánh chưng, visit ancestors’ altars, exchange wishes for luck, and welcome the new lunar year together.";
+
+"holiday_ram_name" = "Rằm tháng Giêng";
+"holiday_ram_short" = "Full moon of the first lunar month — prayer and offerings.";
+"holiday_ram_desc" = "The full moon of the first lunar month is an important day for visiting pagodas, making offerings, and praying for peace and prosperity in the year ahead.";
+
+"holiday_doan_ngo_name" = "Tết Đoan Ngọ";
+"holiday_doan_ngo_short" = "Mid-year festival — cleansing and warding off pests.";
+"holiday_doan_ngo_desc" = "Đoan Ngọ (5/5 lunar) is a traditional mid-year day to purify the body and home, eat fermented foods, and ward off insects and bad luck as summer intensifies.";
+
+"holiday_vu_lan_name" = "Vu Lan (Rằm tháng Bảy)";
+"holiday_vu_lan_short" = "Filial piety — honoring parents and ancestors.";
+"holiday_vu_lan_desc" = "The full moon of the seventh lunar month is associated with Vu Lan, a time to express gratitude to parents and remember ancestors through offerings and compassionate acts.";
+
+"holiday_trung_thu_name" = "Tết Trung Thu";
+"holiday_trung_thu_short" = "Mid-Autumn Festival — mooncakes, lanterns, children.";
+"holiday_trung_thu_desc" = "Trung Thu celebrates the harvest moon with lion dances, lanterns, mooncakes, and gatherings that center children and family joy.";
+
+"holiday_304_name" = "Reunification Day (30/4)";
+"holiday_304_short" = "National holiday — liberation of South Vietnam (1975).";
+"holiday_304_desc" = "30 April marks the fall of Saigon in 1975 and the reunification of Vietnam. It is a national holiday commemorating peace and national unity.";
+
+"holiday_105_name" = "International Labour Day (1/5)";
+"holiday_105_short" = "National holiday — workers and labour rights.";
+"holiday_105_desc" = "1 May is International Workers’ Day, observed in Vietnam as a public holiday celebrating workers’ contributions.";
+
+"holiday_209_name" = "National Day (2/9)";
+"holiday_209_short" = "Independence Day — founding of the Democratic Republic of Vietnam.";
+"holiday_209_desc" = "2 September commemorates Vietnam’s declaration of independence in 1945. It is the country’s main national day with official ceremonies and public celebrations.";
+
+"holiday_hungking_name" = "Hung Kings’ Commemoration Day";
+"holiday_hungking_short" = "10/3 lunar — honoring the Hùng kings.";
+"holiday_hungking_desc" = "This day remembers the legendary Hùng kings and the roots of the Vietnamese nation.";
+
+"holiday_teachers_name" = "Vietnamese Teachers’ Day (20 November)";
+"holiday_teachers_short" = "A day to thank teachers — 20 November.";
+"holiday_teachers_desc" = "Students and families express gratitude to teachers for guiding and sharing knowledge.";
+
+/* Holiday detail (structured + deep) */
+"holiday_detail_section_quick" = "At a glance";
+"holiday_detail_section_meaning" = "Meaning";
+"holiday_detail_section_activities" = "Common activities";
+"holiday_detail_see_more" = "See more";
+"holiday_detail_deep_nav_title" = "Read more";
+"holiday_detail_deep_history" = "History";
+"holiday_detail_deep_origin" = "Origins";
+"holiday_share_footer" = "Lunar Year (lunar calendar)";
+"holiday_detail_fun_fact_title" = "Did you know?";
+
+"holiday_rich_tet_short" = "Tết Nguyên Đán is the most important festival of the year: a fresh start and a time for families to gather.";
+"holiday_rich_tet_meaning" = "Tết marks the turn from the old year to the new, carrying hope, luck, and good beginnings. It is also when people return home to be with family.";
+"holiday_rich_tet_act_1" = "Spring-cleaning the home";
+"holiday_rich_tet_act_2" = "Wrapping bánh chưng";
+"holiday_rich_tet_act_3" = "New Year greetings (Chúc Tết)";
+"holiday_rich_tet_act_4" = "Giving lucky money (lì xì)";
+"holiday_rich_tet_act_5" = "Visiting pagodas";
+"holiday_rich_tet_history" = "Tết Nguyên Đán grew out of wet-rice farming culture and the crop cycle. Over time it became the largest celebration for Vietnamese people.";
+"holiday_rich_tet_funfact" = "The lì xì custom is meant to bring good fortune and drive away bad luck.";
+
+"holiday_rich_vulan_short" = "Vu Lan is the season of filial piety — a time to remember parents’ love and care.";
+"holiday_rich_vulan_meaning" = "Vu Lan is a chance to show gratitude and devotion to parents, whether they are still with us or have passed on.";
+"holiday_rich_vulan_act_1" = "Visiting pagodas";
+"holiday_rich_vulan_act_2" = "Wearing roses (red/white tradition)";
+"holiday_rich_vulan_act_3" = "Honoring ancestors";
+"holiday_rich_vulan_act_4" = "Spending time with family";
+"holiday_rich_vulan_history" = "Vu Lan comes from the Buddhist story of Maudgalyāyana saving his mother.";
+"holiday_rich_vulan_funfact" = "A red rose means your mother is living; a white rose means she has passed away.";
+
+"holiday_rich_trungthu_short" = "Mid-Autumn Festival — a reunion festival when families gather together.";
+"holiday_rich_trungthu_meaning" = "Trung Thu symbolizes togetherness and family happiness.";
+"holiday_rich_trungthu_act_1" = "Lantern processions";
+"holiday_rich_trungthu_act_2" = "Sharing mooncakes";
+"holiday_rich_trungthu_act_3" = "Lion dances";
+"holiday_rich_trungthu_act_4" = "Moon gazing";
+"holiday_rich_trungthu_history" = "Mid-Autumn began in agrarian traditions and gradually became a children’s festival.";
+"holiday_rich_trungthu_funfact" = "In the past, Mid-Autumn was often a festival for adults.";
+
+"holiday_detail_tet_meaning" = "Tết is the hinge of the lunar year: households reset space and spirit, honor ancestors, and exchange wishes for the year ahead. It blends village ethics, family hierarchy, and seasonal rhythms tied to rice farming.";
+"holiday_detail_tet_act_1" = "Deep clean the home, settle debts, and finish unfinished business before Giao thừa.";
+"holiday_detail_tet_act_2" = "Prepare ancestral trays, visit elders first, then neighbors — chúc Tết in order of respect.";
+"holiday_detail_tet_act_3" = "Cook or gift bánh chưng, pickled onions, and mứt; many families keep a quiet first day for parents.";
+"holiday_detail_tet_history" = "Court records from the Lý–Trần era already mark a spring new-year pause. Over centuries the festival absorbed Chinese calendar rituals, local bánh chưng lore, and communal-house customs, becoming the nationwide family holiday seen today.";
+"holiday_detail_tet_origin" = "Roots lie in Han-era 歲首 observances, but Vietnam localized them early with village đình practice, distinct southern/northern foods, and ethics texts that stressed filial duty at year’s turn.";
+
+"holiday_detail_ram_meaning" = "The first full moon after Tết concentrates prayer for the year: merit-making, incense, and calm reflection before spring work intensifies.";
+"holiday_detail_ram_act_1" = "Visit pagodas or family altars with flowers, fruit, and incense.";
+"holiday_detail_ram_act_2" = "Chant or listen to sutras; many households eat vegetarian for the day.";
+"holiday_detail_ram_act_3" = "Give alms or release fish — small compassionate acts to open the year.";
+"holiday_detail_ram_history" = "Buddhist full-moon observance merged with folk “first full moon” luck; in towns and deltas, rằm tháng Giêng became a public day of temple fairs and family outings.";
+"holiday_detail_ram_origin" = "Draws from Mahayana lunar observance and Vietnamese village syncretism where the moon’s rhythm marked community gathering points.";
+
+"holiday_detail_doan_meaning" = "Đoan Ngọ sits at summer’s midpoint: a practical and symbolic cleanse for body, pantry, and home before peak heat and pests.";
+"holiday_detail_doan_act_1" = "Eat sour fermented dishes and ripe fruit thought to “clear” heat.";
+"holiday_detail_doan_act_2" = "Clean kitchens, sweep corners, and refresh herbal bundles against insects.";
+"holiday_detail_doan_act_3" = "Some families make offerings at mid-day to mark the solar midpoint.";
+"holiday_detail_doan_history" = "Fifth-day-of-fifth-month customs appear across East Asia; in Vietnam the festival picked up agrarian pest-control logic and herbal-household knowledge.";
+"holiday_detail_doan_origin" = "Combines continental midsummer hygiene ideas with local names like “worm-killing festival” (giết sâu bọ) in folk speech.";
+
+"holiday_detail_vulan_meaning" = "Vu Lan names filial gratitude: children remember parents living and gone, and communities widen care to hungry spirits in the compassionate frame of Ullambana.";
+"holiday_detail_vulan_act_1" = "Visit parents with gifts; apologize and reconcile where needed.";
+"holiday_detail_vulan_act_2" = "Offer rice, salt, and robes at pagodas for ancestors and wandering souls.";
+"holiday_detail_vulan_act_3" = "Join collective chanting or release ceremonies led by temples.";
+"holiday_detail_vulan_history" = "The Ullambana sutra story arrived with Buddhism; Vietnamese rằm tháng Bảy layered ancestor tablets, ghost-feeding folklore, and charity kitchens.";
+"holiday_detail_vulan_origin" = "Sanskrit Ullambana (“hanging upside down”) rescue tale reframed in East Asia as a festival of universal compassion tied to the seventh moon.";
+
+"holiday_detail_trungthu_meaning" = "Trung Thu centers the harvest moon, children, and round foods that symbolize reunion under a clear sky.";
+"holiday_detail_trungthu_act_1" = "Carry lanterns, lion-dance parades, and moon-watching on rooftops or yards.";
+"holiday_detail_trungthu_act_2" = "Share mooncakes — baked or sticky — between families and offices.";
+"holiday_detail_trungthu_act_3" = "Gift toys and fruit to children; many schools hold mid-autumn parties.";
+"holiday_detail_trungthu_history" = "Song-era Chinese moon festival motifs arrived with trade; Vietnam added đèn kéo quân, regional cake styles, and dense urban lantern fairs.";
+"holiday_detail_trungthu_origin" = "Astronomical full moon of the eighth lunar month plus agrarian thanks for the summer crop before winter fields.";
+
+"holiday_detail_304_meaning" = "30 April marks the end of the war division and the beginning of a single-state narrative for millions of Vietnamese families.";
+"holiday_detail_304_act_1" = "Official parades, flag ceremonies, and televised addresses in major cities.";
+"holiday_detail_304_act_2" = "Many people travel to reunite or visit historic sites linked to 1975.";
+"holiday_detail_304_history" = "Saigon’s surrender on 30 April 1975 concluded major combat; the date became Reunification Day and a fixed public holiday.";
+"holiday_detail_304_origin" = "State commemoration codified after reunification to anchor national memory on a single calendar date.";
+
+"holiday_detail_105_meaning" = "International Workers’ Day aligns Vietnam with global labour rights language while honoring domestic productivity.";
+"holiday_detail_105_act_1" = "Trade unions and firms hold awards or outings for staff.";
+"holiday_detail_105_act_2" = "Public rest; some cities host concerts or fairs in parks.";
+"holiday_detail_105_history" = "May Day spread from nineteenth-century Chicago and European labour movements; Vietnam adopted public observance in the modern period.";
+"holiday_detail_105_origin" = "Second International tradition fixed 1 May as workers’ solidarity day worldwide.";
+
+"holiday_detail_209_meaning" = "National Day celebrates independence declared in Ba Đình square and the founding myth of the modern Vietnamese state.";
+"holiday_detail_209_act_1" = "Flag-raising in Hà Nội and provincial capitals; fireworks in permitted areas.";
+"holiday_detail_209_act_2" = "Families picnic or watch broadcasts; offices close nationwide.";
+"holiday_detail_209_history" = "2 September 1945 speech by Hồ Chí Minh is the anchor event; the holiday stabilized after 1954 and again after reunification.";
+"holiday_detail_209_origin" = "Tied to the August Revolution timeline that removed the Japanese-backed administration and opened the independence declaration.";

@@ -6,12 +6,20 @@
 import Foundation
 import UserNotifications
 
+/// Identifier prefix for one-shot holiday reminders (`ReminderService`); parsed when highlighting the calendar.
+enum HolidayPendingNotificationId {
+    static let prefix = "calendar.holiday."
+    static func identifier(holidayId: UUID) -> String { "\(prefix)\(holidayId.uuidString)" }
+}
+
 protocol ReminderNotificationScheduling: AnyObject {
     func requestAuthorizationIfNeeded() async -> Bool
     func removePendingNotifications(withIdentifiers ids: [String])
     func add(_ request: ReminderNotificationRequest)
     /// Used to cancel and reschedule without depending on `UNUserNotificationCenter` in app code (mock-friendly).
     func pendingNotificationIdentifiers() async -> [String]
+    /// Pending holiday one-shots: holiday id and next fire date (from the notification trigger).
+    func pendingHolidayReminderFires() async -> [(holidayId: UUID, fireDate: Date)]
 }
 
 struct ReminderNotificationRequest {
@@ -42,20 +50,48 @@ final class UNNotificationScheduler: ReminderNotificationScheduling {
         content.sound = AppNotificationSoundPreference.current().notificationSound()
         content.badge = 1
         if #available(iOS 15.0, *) {
-            content.interruptionLevel = .timeSensitive
+            // `.timeSensitive` requires the Time Sensitive Notifications capability; use `.active` so delivery is reliable.
+            content.interruptionLevel = .active
         }
-        var cal = Calendar(identifier: .gregorian)
-        cal.timeZone = LunarReminderConverter.vietnamTimeZone
-        let comps = cal.dateComponents([.year, .month, .day, .hour, .minute, .second], from: request.fireDate)
-        let trigger = UNCalendarNotificationTrigger(dateMatching: comps, repeats: false)
+        // `UNCalendarNotificationTrigger(dateMatching:repeats:)` uses the **device** calendar/timezone, so
+        // Vietnam 08:00 wall times were mis-scheduled for users outside VN (or never fired). Interval trigger matches the absolute `fireDate`.
+        let seconds = request.fireDate.timeIntervalSinceNow
+        guard seconds > 1 else { return }
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: seconds, repeats: false)
         let req = UNNotificationRequest(identifier: request.identifier, content: content, trigger: trigger)
-        UNUserNotificationCenter.current().add(req)
+        UNUserNotificationCenter.current().add(req, withCompletionHandler: nil)
     }
 
     func pendingNotificationIdentifiers() async -> [String] {
         await withCheckedContinuation { cont in
             UNUserNotificationCenter.current().getPendingNotificationRequests { reqs in
                 cont.resume(returning: reqs.map(\.identifier))
+            }
+        }
+    }
+
+    func pendingHolidayReminderFires() async -> [(holidayId: UUID, fireDate: Date)] {
+        await withCheckedContinuation { cont in
+            UNUserNotificationCenter.current().getPendingNotificationRequests { reqs in
+                let p = HolidayPendingNotificationId.prefix
+                var out: [(UUID, Date)] = []
+                out.reserveCapacity(4)
+                for r in reqs {
+                    guard r.identifier.hasPrefix(p) else { continue }
+                    let rest = String(r.identifier.dropFirst(p.count))
+                    guard let uuid = UUID(uuidString: rest) else { continue }
+                    let fire: Date?
+                    if let t = r.trigger as? UNTimeIntervalNotificationTrigger {
+                        fire = t.nextTriggerDate()
+                    } else if let t = r.trigger as? UNCalendarNotificationTrigger {
+                        fire = t.nextTriggerDate()
+                    } else {
+                        fire = nil
+                    }
+                    guard let f = fire else { continue }
+                    out.append((uuid, f))
+                }
+                cont.resume(returning: out)
             }
         }
     }
@@ -77,5 +113,15 @@ final class MockNotificationScheduler: ReminderNotificationScheduling {
 
     func pendingNotificationIdentifiers() async -> [String] {
         lastRequests.map(\.identifier)
+    }
+
+    func pendingHolidayReminderFires() async -> [(holidayId: UUID, fireDate: Date)] {
+        let p = HolidayPendingNotificationId.prefix
+        return lastRequests.compactMap { req in
+            guard req.identifier.hasPrefix(p) else { return nil }
+            let rest = String(req.identifier.dropFirst(p.count))
+            guard let uuid = UUID(uuidString: rest) else { return nil }
+            return (uuid, req.fireDate)
+        }
     }
 }

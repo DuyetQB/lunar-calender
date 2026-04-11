@@ -224,7 +224,7 @@ struct LunarWidgetView: View {
     let entry: LunarWidgetEntry
 
     private var colors: AppThemeColors {
-        let raw = UserDefaults(suiteName: SharedConfig.appGroupId)?.string(forKey: SharedConfig.themeAccentKey)
+        let raw = AppGroupPreferences.string(forKey: SharedConfig.themeAccentKey)
         let accent = AccentTheme(rawValue: raw ?? "") ?? .terracotta
         return AppThemeColors.palette(accent)
     }

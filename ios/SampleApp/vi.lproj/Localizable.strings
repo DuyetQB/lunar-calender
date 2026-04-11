@@ -157,3 +157,168 @@
 "notes_empty_subtitle" = "Nhấn + để tạo ghi chú và nhắc nhở.";
 "notes_lunar_repeat_badge" = "Lặp âm lịch";
 "notes_notification_default_body" = "Bạn có một ghi chú hôm nay.";
+
+/* Holidays */
+"holiday_section_title" = "Ngày lễ sắp tới";
+"holiday_empty" = "Không có ngày lễ trong khoảng hiện tại.";
+"holiday_countdown_format" = "Còn %d ngày";
+"holiday_date_line_format" = "Dương: %d/%d/%d · Âm: %@";
+"holiday_remind_me" = "Nhắc tôi";
+"holiday_set_reminder" = "Đặt nhắc";
+"holiday_reminder_alert_title" = "Nhắc ngày lễ";
+"holiday_reminder_denied_message" = "Thông báo đang tắt. Bật trong Cài đặt để nhận nhắc vào ngày lễ.";
+"holiday_reminder_no_occurrence" = "Không tìm thấy ngày lễ tiếp theo trong phạm vi lịch hỗ trợ.";
+"holiday_reminder_open_settings" = "Mở Cài đặt";
+"holiday_reminder_scheduled_title" = "Đã đặt nhắc";
+"holiday_reminder_scheduled_message" = "Bạn sẽ nhận thông báo lúc 08:00 vào ngày đó (giờ Việt Nam).";
+"detail_holiday_reminder_title" = "Nhắc ngày lễ";
+"detail_holiday_reminder_time" = "Thông báo lúc 08:00 (giờ Việt Nam)";
+"calendar_holiday_reminder_a11y" = "Đã đặt nhắc ngày lễ";
+"holiday_learn_more" = "Chi tiết";
+"holiday_home_banner_title" = "Ngày lễ gần nhất";
+"holiday_card_section_title" = "Ngày lễ gần nhất";
+"holiday_list_title" = "Ngày lễ Việt Nam";
+"holiday_see_all" = "Xem tất cả ngày lễ";
+"holiday_remind_me_short" = "Nhắc tôi";
+"holiday_fun_fact_heading" = "💡 Bạn có biết?";
+"holiday_view_button" = "Xem";
+"holiday_card_more_format" = "+%d nữa";
+"holiday_lunar_format" = "Âm lịch · %@";
+"holiday_category_traditional" = "Truyền thống";
+"holiday_category_national" = "Quốc gia";
+"holiday_category_spiritual" = "Tâm linh";
+"holiday_category_buddhist" = "Phật giáo";
+"holiday_category_folk" = "Dân gian";
+"holiday_category_modern" = "Hiện đại";
+
+"holiday_tet_name" = "Tết Nguyên Đán";
+"holiday_tet_short" = "Tết cổ truyền — sum họp gia đình, giỗ tổ.";
+"holiday_tet_desc" = "Tết Nguyên Đán là đầu năm âm lịch Việt Nam. Nhà nhà dọn dẹp, gói bánh chưng, thắp hương ông bà, chúc Tết và đón năm mới cùng người thân.";
+
+"holiday_ram_name" = "Rằm tháng Giêng";
+"holiday_ram_short" = "Rằm tháng Giêng — lễ chùa, cầu an đầu năm.";
+"holiday_ram_desc" = "Rằm tháng Giêng là ngày quan trọng để lễ Phật, dâng hương hoa, cầu bình an và may mắn cho cả năm.";
+
+"holiday_doan_ngo_name" = "Tết Đoan Ngọ";
+"holiday_doan_ngo_short" = "Giữa năm — giải độc, trừ sâu bọ.";
+"holiday_doan_ngo_desc" = "Đoan Ngọ (mùng 5 tháng 5 âm) là ngày dân gian thanh lọc cơ thể và nhà cửa, ăn đồ chua, trừ côn trùng và xua điều không lành khi vào hè.";
+
+"holiday_vu_lan_name" = "Vu Lan (Rằm tháng Bảy)";
+"holiday_vu_lan_short" = "Báo hiếu — nhớ ơn cha mẹ, ông bà.";
+"holiday_vu_lan_desc" = "Rằm tháng Bảy gắn với lễ Vu Lan: báo hiếu cha mẹ, cúng giỗ tổ tiên và làm việc thiện.";
+
+"holiday_trung_thu_name" = "Tết Trung Thu";
+"holiday_trung_thu_short" = "Tết trăng rằm — bánh Trung Thu, đèn lồng, trẻ em.";
+"holiday_trung_thu_desc" = "Trung Thu là lễ hội trăng rằm với múa lân, đèn lồng, bánh nướng bánh dẻo và không khí vui vầy quanh trẻ em.";
+
+"holiday_304_name" = "Ngày Giải phóng miền Nam (30/4)";
+"holiday_304_short" = "Lễ quốc gia — thống nhất đất nước (1975).";
+"holiday_304_desc" = "30/4 kỷ niệm sự kiện Sài Gòn được giải phóng năm 1975, đánh dấu thống nhất Việt Nam. Đây là ngày nghỉ lễ quốc gia.";
+
+"holiday_105_name" = "Ngày Quốc tế Lao động (1/5)";
+"holiday_105_short" = "Lễ quốc gia — tôn vinh người lao động.";
+"holiday_105_desc" = "1/5 là ngày Quốc tế Lao động, Việt Nam nghỉ lễ để ghi nhận đóng góp của người lao động.";
+
+"holiday_209_name" = "Quốc khánh (2/9)";
+"holiday_209_short" = "Độc lập — tuyên bố nước Việt Nam Dân chủ Cộng hòa.";
+"holiday_209_desc" = "2/9 kỷ niệm Cách mạng tháng Tám và Quốc khánh nước Việt Nam Dân chủ Cộng hòa (1945). Đây là ngày lễ quốc gia quan trọng nhất.";
+
+"holiday_hungking_name" = "Giỗ Tổ Hùng Vương";
+"holiday_hungking_short" = "10/3 âm lịch — tưởng nhớ các vua Hùng.";
+"holiday_hungking_desc" = "Ngày Giỗ Tổ Hùng Vương tôn vinh truyền thống dựng nước và giữ nước của dân tộc Việt.";
+
+"holiday_teachers_name" = "Ngày Nhà giáo Việt Nam (20/11)";
+"holiday_teachers_short" = "Tri ân thầy cô — ngày 20 tháng 11.";
+"holiday_teachers_desc" = "20/11 là dịp học trò bày tỏ lòng biết ơn với những người đã dạy dỗ, truyền tri thức.";
+
+/* Holiday detail (structured + deep) */
+"holiday_detail_section_quick" = "Tóm tắt";
+"holiday_detail_section_meaning" = "Ý nghĩa";
+"holiday_detail_section_activities" = "Hoạt động thường gặp";
+"holiday_detail_see_more" = "Xem thêm";
+"holiday_detail_deep_nav_title" = "Tìm hiểu thêm";
+"holiday_detail_deep_history" = "Lịch sử";
+"holiday_detail_deep_origin" = "Nguồn gốc";
+"holiday_share_footer" = "Ứng dụng Âm lịch (Lunar Year)";
+"holiday_detail_fun_fact_title" = "Bạn có biết?";
+
+"holiday_rich_tet_short" = "Tết Nguyên Đán – dịp lễ quan trọng nhất trong năm, đánh dấu sự khởi đầu mới và là thời gian sum họp gia đình.";
+"holiday_rich_tet_meaning" = "Tết là thời điểm chuyển giao giữa năm cũ và năm mới, mang theo hy vọng, may mắn và những khởi đầu tốt đẹp. Đây cũng là dịp để mọi người trở về quê hương, sum họp với gia đình.";
+"holiday_rich_tet_act_1" = "Dọn dẹp nhà cửa";
+"holiday_rich_tet_act_2" = "Gói bánh chưng";
+"holiday_rich_tet_act_3" = "Chúc Tết";
+"holiday_rich_tet_act_4" = "Lì xì";
+"holiday_rich_tet_act_5" = "Đi chùa";
+"holiday_rich_tet_history" = "Tết Nguyên Đán có nguồn gốc từ nền văn minh lúa nước, gắn liền với chu kỳ mùa vụ. Qua thời gian, Tết trở thành ngày lễ lớn nhất của người Việt.";
+"holiday_rich_tet_funfact" = "Phong tục lì xì mang ý nghĩa mang lại may mắn và xua đuổi điều xấu.";
+
+"holiday_rich_vulan_short" = "Lễ Vu Lan – mùa báo hiếu, là dịp để mỗi người nhớ về công ơn cha mẹ.";
+"holiday_rich_vulan_meaning" = "Vu Lan là dịp để thể hiện lòng hiếu thảo, tri ân cha mẹ – dù còn sống hay đã khuất.";
+"holiday_rich_vulan_act_1" = "Đi chùa";
+"holiday_rich_vulan_act_2" = "Cài hoa hồng";
+"holiday_rich_vulan_act_3" = "Cúng tổ tiên";
+"holiday_rich_vulan_act_4" = "Dành thời gian cho gia đình";
+"holiday_rich_vulan_history" = "Lễ Vu Lan bắt nguồn từ tích Mục Kiền Liên cứu mẹ trong Phật giáo.";
+"holiday_rich_vulan_funfact" = "Hoa hồng đỏ là còn mẹ, hoa trắng là mất mẹ.";
+
+"holiday_rich_trungthu_short" = "Tết Trung Thu – Tết đoàn viên, là dịp để gia đình quây quần bên nhau.";
+"holiday_rich_trungthu_meaning" = "Trung Thu là biểu tượng của sự đoàn tụ và hạnh phúc gia đình.";
+"holiday_rich_trungthu_act_1" = "Rước đèn";
+"holiday_rich_trungthu_act_2" = "Ăn bánh trung thu";
+"holiday_rich_trungthu_act_3" = "Múa lân";
+"holiday_rich_trungthu_act_4" = "Ngắm trăng";
+"holiday_rich_trungthu_history" = "Trung Thu có nguồn gốc từ nền văn minh nông nghiệp và dần trở thành ngày hội thiếu nhi.";
+"holiday_rich_trungthu_funfact" = "Trung Thu xưa từng là lễ hội dành cho người lớn.";
+
+"holiday_detail_tet_meaning" = "Tết là mốc chuyển năm âm: dọn nhà, dứt việc dang dở, giỗ tổ và chúc nhau may mắn. Lễ gắn với nhịp làng xã, thứ bậc trong nhà và mùa vụ lúa.";
+"holiday_detail_tet_act_1" = "Dọn dẹp sâu, trả nợ, xong việc trước Giao thừa.";
+"holiday_detail_tet_act_2" = "Bày mâm gia tiên, thăm ông bà cha mẹ trước, rồi chúc Tết theo thứ tự tôn ti.";
+"holiday_detail_tet_act_3" = "Gói/ biếu bánh chưng, dưa hành, mứt; nhiều nhà giữ mồng Một yên để bái tế cha mẹ.";
+"holiday_detail_tet_history" = "Sử cung đình thời Lý–Trần đã ghi nghỉ đầu xuân. Qua các thế kỷ, Tết hấp thụ phong văn lịch, truyền thuyết bánh chưng và lệ đình làng, thành ngày sum họp cả nước như hiện nay.";
+"holiday_detail_tet_origin" = "Bắt nguồn tục tuế thủ Hán nhưng Việt Nam địa phương hóa sớm bằng đình làng, món ăn Nam–Bắc khác nhau và đạo hiếu trong văn huấn.";
+
+"holiday_detail_ram_meaning" = "Rằm tháng Giêng tập trung cầu an đầu năm: tạo phước, dâng hương, lặng suy ngẫm trước khi nhịp xuân việc đồng áng dày lên.";
+"holiday_detail_ram_act_1" = "Lễ chùa hoặc bàn thờ với hoa, trái, hương.";
+"holiday_detail_ram_act_2" = "Tụng kinh hoặc nghe kinh; nhiều nhà ăn chay trong ngày.";
+"holiday_detail_ram_act_3" = "Bố thí, phóng sinh — việc nhỏ mở đầu năm từ bi.";
+"holiday_detail_ram_history" = "Rằm Phật giáo hòa với quan niệm dân gian “trăng đầu năm”; ở đồng bằng, rằm Giêng thành ngày hội chùa và sum họp.";
+"holiday_detail_ram_origin" = "Từ quan sát nguyệt Mahayana và tục làng Việt lấy trăng làm điểm hẹn cộng đồng.";
+
+"holiday_detail_doan_meaning" = "Đoan Ngọ ở giữa hè: thanh lọc cơ thể, bếp và nhà cửa trước lúc nắng và côn trùng đạt đỉnh.";
+"holiday_detail_doan_act_1" = "Ăn chua ngâm, trái chín để “giải nhiệt”.";
+"holiday_detail_doan_act_2" = "Lau bếp, quét góc, thay lá thuốc xông đuổi côn trùng.";
+"holiday_detail_doan_act_3" = "Một số nhà cúng giữa trưa đánh dấu điểm giữa ngày hạ chí.";
+"holiday_detail_doan_history" = "Tục mồng 5 tháng 5 có ở nhiều nước Đông Á; ở Việt Nam gắn thêm kinh nghiệm nhà nông diệt sâu bọ và thảo dược.";
+"holiday_detail_doan_origin" = "Hợp lý vệ sinh mùa hè với tên dân gian như “Tết giết sâu bọ”.";
+
+"holiday_detail_vulan_meaning" = "Vu Lan đặt tình hiếu: nhớ cha mẹ đang tại thế và đã khuất, cộng đồng mở lòng với chúng sinh trong khung từ bi Ullambana.";
+"holiday_detail_vulan_act_1" = "Thăm cha mẹ, tặng quà, làm lành chuyện cũ.";
+"holiday_detail_vulan_act_2" = "Cúng cơm, muối, áo tại chùa cho tổ tiên và vong linh.";
+"holiday_detail_vulan_act_3" = "Tham gia tụng kinh chung hoặc lễ phóng sinh do chùa tổ chức.";
+"holiday_detail_vulan_history" = "Truyện Ullambana theo Phật giáo đến Việt Nam; rằm tháng Bảy chồng bài vị gia tiên, tục cúng cô hồn và bếp cơm từ thiện.";
+"holiday_detail_vulan_origin" = "Từ nghĩa cứu mẹ treo ngược trong kinh, được Đông Á đọc thành lễ báo ân và đại xá tháng bảy.";
+
+"holiday_detail_trungthu_meaning" = "Trung Thu xoay quanh trăng rằm, trẻ em và đồ tròn tượng sum họp dưới trời trong.";
+"holiday_detail_trungthu_act_1" = "Rước đèn, múa lân, ngắm trăng sân thượng hoặc sân nhà.";
+"holiday_detail_trungthu_act_2" = "Biếu bánh nướng, bánh dẻo giữa họ hàng và đồng nghiệp.";
+"holiday_detail_trungthu_act_3" = "Tặng đồ chơi, hoa quả cho trẻ; nhiều trường tổ chức hội rằm.";
+"holiday_detail_trungthu_history" = "Họa tiết Tống từ giao thương; Việt Nam thêm đèn kéo quân, kiểu bánh địa phương và chợ đèn đông đúc.";
+"holiday_detail_trungthu_origin" = "Trăng rằm tháng tám âm và lễ tạ mùa hè trước vụ đông.";
+
+"holiday_detail_304_meaning" = "30/4 đánh dấu chấm hết chia cắt chiến tranh và mở kể chuyện một quốc gia thống nhất cho hàng triệu người.";
+"holiday_detail_304_act_1" = "Diễu binh, lễ thượng cờ, bài phát biểu truyền hình ở các đô thị.";
+"holiday_detail_304_act_2" = "Nhiều người về quê hoặc thăm di tích gắn 1975.";
+"holiday_detail_304_history" = "Sài Gòn được giải phóng 30/4/1975 kết thúc giai đoạn chiến chính; ngày được cố định là lễ Thống nhất.";
+"holiday_detail_304_origin" = "Nghi lễ nhà nước sau thống nhất để neo ký ức dân tộc vào một ngày dương lịch.";
+
+"holiday_detail_105_meaning" = "1/5 đồng bộ Việt Nam với ngôn ngữ quyền lao động quốc tế, đồng thời ghi nhận lao động trong nước.";
+"holiday_detail_105_act_1" = "Công đoàn, doanh nghiệp tổ chức khen thưởng hoặc dã ngoại.";
+"holiday_detail_105_act_2" = "Nghỉ công cộng; một số thành phố có ca nhạc hoặc hội chợ công viên.";
+"holiday_detail_105_history" = "Ngày Quốc tế Lao động lan từ phong trào Chicago và châu Âu thế kỷ XIX; Việt Nam nghỉ lễ theo thời hiện đại.";
+"holiday_detail_105_origin" = "Truyền thống Quốc tế Nhị định 1/5 là ngày đoàn kết người lao động.";
+
+"holiday_detail_209_meaning" = "Quốc khánh kỷ niệm bản Tuyên ngôn độc lập ở Ba Đình và câu chuyện mở nước hiện đại.";
+"holiday_detail_209_act_1" = "Lễ thượng cờ Hà Nội và các tỉnh; pháo hoa nơi được phép.";
+"holiday_detail_209_act_2" = "Gia đình dã ngoại hoặc xem truyền hình; cơ quan đóng cửa cả nước.";
+"holiday_detail_209_history" = "Bài diễn văn 2/9/1945 là mốc; lễ cố định sau 1954 và sau thống nhất.";
+"holiday_detail_209_origin" = "Gắn với Cách mạng tháng Tám lật chính quyền sau Nhật, mở ra tuyên bố độc lập.";

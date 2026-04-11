@@ -114,10 +114,10 @@ enum WidgetService {
 
     /// Reads optional saved coordinates from the App Group (set by the main app when you add a location picker).
     static func savedCoordinates() -> (lat: Double, lng: Double)? {
-        let d = UserDefaults(suiteName: SharedConfig.appGroupId)
-        guard let d,
-              d.object(forKey: SharedConfig.widgetLatitudeKey) != nil,
-              d.object(forKey: SharedConfig.widgetLongitudeKey) != nil else { return nil }
-        return (d.double(forKey: SharedConfig.widgetLatitudeKey), d.double(forKey: SharedConfig.widgetLongitudeKey))
+        guard AppGroupPreferences.object(forKey: SharedConfig.widgetLatitudeKey) != nil,
+              AppGroupPreferences.object(forKey: SharedConfig.widgetLongitudeKey) != nil,
+              let lat = AppGroupPreferences.double(forKey: SharedConfig.widgetLatitudeKey),
+              let lng = AppGroupPreferences.double(forKey: SharedConfig.widgetLongitudeKey) else { return nil }
+        return (lat, lng)
     }
 }

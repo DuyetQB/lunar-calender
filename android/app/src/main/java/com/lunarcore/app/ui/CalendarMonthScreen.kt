@@ -1,5 +1,3 @@
-@file:OptIn(androidx.compose.material3.ExperimentalMaterial3Api::class)
-
 package com.lunarcore.app.ui
 
 import android.app.TimePickerDialog
@@ -462,8 +460,8 @@ private fun SettingsScreen(
     onBack: () -> Unit,
     scheduler: ReminderScheduler
 ) {
+    var sound by remember { mutableStateOf(ReminderScheduler.soundPreference(LocalContext.current)) }
     val context = LocalContext.current
-    var sound by remember(context) { mutableStateOf(ReminderScheduler.soundPreference(context)) }
     Scaffold(
         topBar = {
             TopAppBar(

@@ -36,8 +36,7 @@ final class AppLanguageManager: ObservableObject {
     }
 
     private static func loadInitialLanguage() -> AppLanguage {
-        if let suite = UserDefaults(suiteName: SharedConfig.appGroupId),
-           let raw = suite.string(forKey: SharedConfig.languageKey),
+        if let raw = AppGroupPreferences.string(forKey: SharedConfig.languageKey),
            let parsed = AppLanguage(rawValue: raw) {
             return parsed
         }
@@ -51,7 +50,7 @@ final class AppLanguageManager: ObservableObject {
 
     private func persist(_ lang: AppLanguage) {
         UserDefaults.standard.set(lang.rawValue, forKey: SharedConfig.languageKey)
-        UserDefaults(suiteName: SharedConfig.appGroupId)?.set(lang.rawValue, forKey: SharedConfig.languageKey)
+        AppGroupPreferences.set(lang.rawValue, forKey: SharedConfig.languageKey)
         WidgetCenter.shared.reloadAllTimelines()
     }
 }

@@ -12,6 +12,7 @@
 		AA0003 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0013 /* DetailView.swift */; };
 		AA0005 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0014 /* Theme.swift */; };
 		AA0006 /* SharedConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0015 /* SharedConfig.swift */; };
+		AGP001 /* AppGroupPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = AGP011 /* AppGroupPreferences.swift */; };
 		AA0007 /* AppLanguageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0016 /* AppLanguageManager.swift */; };
 		AA0008 /* RootTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0017 /* RootTabView.swift */; };
 		AA0009 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0018 /* HomeView.swift */; };
@@ -37,6 +38,10 @@
 		NS0002 /* NoteStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = NS0012 /* NoteStore.swift */; };
 		NS0003 /* NoteEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = NS0013 /* NoteEditorView.swift */; };
 		NS0004 /* NoteListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = NS0014 /* NoteListView.swift */; };
+		HD0001 /* HolidayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = HD0011 /* HolidayModel.swift */; };
+		HD0002 /* HolidayData.swift in Sources */ = {isa = PBXBuildFile; fileRef = HD0012 /* HolidayData.swift */; };
+		HD0003 /* HolidayService.swift in Sources */ = {isa = PBXBuildFile; fileRef = HD0013 /* HolidayService.swift */; };
+		HD0004 /* HolidayViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = HD0014 /* HolidayViews.swift */; };
 		WG0006 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0014 /* Theme.swift */; };
 		LC0001 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = LC0011 /* Models.swift */; };
 		LC0002 /* JulianDateConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = LC0012 /* JulianDateConverter.swift */; };
@@ -53,6 +58,7 @@
 		WG0001 /* LunarYearWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = WG0011 /* LunarYearWidgetBundle.swift */; };
 		WG0002 /* QuoteWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = WG0012 /* QuoteWidget.swift */; };
 		WG0003 /* SharedConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0015 /* SharedConfig.swift */; };
+		AGP002 /* AppGroupPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = AGP011 /* AppGroupPreferences.swift */; };
 		WG0004 /* DailyQuotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0020 /* DailyQuotes.swift */; };
 		WG0005 /* LunarYearWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = WG0000 /* LunarYearWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		WDA001 /* WidgetDataModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = WD0011 /* WidgetDataModels.swift */; };
@@ -115,6 +121,7 @@
 		AA0013 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		AA0014 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		AA0015 /* SharedConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedConfig.swift; sourceTree = "<group>"; };
+		AGP011 /* AppGroupPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppGroupPreferences.swift; sourceTree = "<group>"; };
 		AA0016 /* AppLanguageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLanguageManager.swift; sourceTree = "<group>"; };
 		AA0017 /* RootTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabView.swift; sourceTree = "<group>"; };
 		AA0018 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -141,6 +148,10 @@
 		NS0012 /* NoteStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteStore.swift; sourceTree = "<group>"; };
 		NS0013 /* NoteEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteEditorView.swift; sourceTree = "<group>"; };
 		NS0014 /* NoteListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListView.swift; sourceTree = "<group>"; };
+		HD0011 /* HolidayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolidayModel.swift; sourceTree = "<group>"; };
+		HD0012 /* HolidayData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolidayData.swift; sourceTree = "<group>"; };
+		HD0013 /* HolidayService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolidayService.swift; sourceTree = "<group>"; };
+		HD0014 /* HolidayViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolidayViews.swift; sourceTree = "<group>"; };
 		AA0021 /* LunarYear.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LunarYear.entitlements; sourceTree = "<group>"; };
 		LC0011 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		LC0012 /* JulianDateConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JulianDateConverter.swift; sourceTree = "<group>"; };
@@ -208,6 +219,7 @@
 				AA0013 /* DetailView.swift */,
 				AA0014 /* Theme.swift */,
 				AA0015 /* SharedConfig.swift */,
+				AGP011 /* AppGroupPreferences.swift */,
 				AA0016 /* AppLanguageManager.swift */,
 				AA0023 /* ThemeManager.swift */,
 				AA0017 /* RootTabView.swift */,
@@ -218,6 +230,7 @@
 				WD0090 /* Widget */,
 				RM0090 /* Reminder */,
 				NS0090 /* Notes */,
+				HD0090 /* Holidays */,
 				PR0090 /* Profile */,
 				AA0021 /* LunarYear.entitlements */,
 				LOC001 /* Localizable.strings */,
@@ -318,6 +331,17 @@
 				NS0014 /* NoteListView.swift */,
 			);
 			path = Features/Notes;
+			sourceTree = "<group>";
+		};
+		HD0090 /* Holidays */ = {
+			isa = PBXGroup;
+			children = (
+				HD0011 /* HolidayModel.swift */,
+				HD0012 /* HolidayData.swift */,
+				HD0013 /* HolidayService.swift */,
+				HD0014 /* HolidayViews.swift */,
+			);
+			path = Features/Holidays;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -440,6 +464,7 @@
 				LC0009 /* HoangDaoCalculator.swift in Sources */,
 				LC0010 /* LunarEngine.swift in Sources */,
 				AA0006 /* SharedConfig.swift in Sources */,
+				AGP001 /* AppGroupPreferences.swift in Sources */,
 				AA0007 /* AppLanguageManager.swift in Sources */,
 				AA0008 /* RootTabView.swift in Sources */,
 				AA0009 /* HomeView.swift in Sources */,
@@ -465,6 +490,10 @@
 				NS0002 /* NoteStore.swift in Sources */,
 				NS0003 /* NoteEditorView.swift in Sources */,
 				NS0004 /* NoteListView.swift in Sources */,
+				HD0001 /* HolidayModel.swift in Sources */,
+				HD0002 /* HolidayData.swift in Sources */,
+				HD0003 /* HolidayService.swift in Sources */,
+				HD0004 /* HolidayViews.swift in Sources */,
 				WDA001 /* WidgetDataModels.swift in Sources */,
 				WDA002 /* SunTimeCalculator.swift in Sources */,
 				WDA003 /* ZodiacCatalog.swift in Sources */,
@@ -483,6 +512,7 @@
 				WG0002 /* QuoteWidget.swift in Sources */,
 				WG0007 /* LunarWidget.swift in Sources */,
 				WG0003 /* SharedConfig.swift in Sources */,
+				AGP002 /* AppGroupPreferences.swift in Sources */,
 				WG0004 /* DailyQuotes.swift in Sources */,
 				WG0006 /* Theme.swift in Sources */,
 				WDW001 /* WidgetDataModels.swift in Sources */,
@@ -610,7 +640,6 @@
 				INFOPLIST_KEY_CFBundleDisplayName = "Âm Lịch";
 				INFOPLIST_KEY_UIApplicationScene_Manifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UIBackgroundModes = remote-notification;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -644,7 +673,6 @@
 				INFOPLIST_KEY_CFBundleDisplayName = "Âm Lịch";
 				INFOPLIST_KEY_UIApplicationScene_Manifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UIBackgroundModes = remote-notification;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

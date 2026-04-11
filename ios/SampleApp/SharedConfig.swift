@@ -7,6 +7,9 @@ import Foundation
 
 enum SharedConfig {
     static let appGroupId = "group.com.lunaryear.app"
+
+    /// App ↔ widget shared keys live in `AppGroupPreferences` (plist in the group container), not `UserDefaults(suiteName:)`.
+
     static let languageKey = "app_language"
     static let themeAccentKey = "app_theme_accent"
     static let themeAppearanceKey = "app_theme_appearance"

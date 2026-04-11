@@ -4,6 +4,7 @@
 //
 
 import Foundation
+import UserNotifications
 
 final class ReminderService {
     private let engine = LunarEngine()
@@ -38,11 +39,73 @@ final class ReminderService {
 
     @discardableResult
     func requestNotificationPermission() async -> Bool {
-        await notifier.requestAuthorizationIfNeeded()
+        let settings = await notificationSettings()
+        switch settings.authorizationStatus {
+        case .authorized, .provisional, .ephemeral:
+            return true
+        case .denied:
+            return false
+        case .notDetermined:
+            return await notifier.requestAuthorizationIfNeeded()
+        @unknown default:
+            return await notifier.requestAuthorizationIfNeeded()
+        }
+    }
+
+    private func notificationSettings() async -> UNNotificationSettings {
+        await withCheckedContinuation { cont in
+            UNUserNotificationCenter.current().getNotificationSettings { cont.resume(returning: $0) }
+        }
     }
 
     func scheduleNotification(date: Date, title: String, body: String) {
         scheduleNotification(date: date, title: title, body: body, identifier: UUID().uuidString)
+    }
+
+    // MARK: - Vietnamese holidays (one-shot local notifications)
+
+    /// Schedules a single pending notification for the next occurrence of `holiday` at `fireDate` (absolute instant, e.g. 08:00 Vietnam).
+    /// Pass the same `now` used when computing `fireDate` so the “still in the future” check cannot race `Date()`.
+    func scheduleHolidayNotification(holiday: Holiday, fireDate: Date, now: Date = Date()) {
+        guard fireDate > now else { return }
+        notifier.removePendingNotifications(withIdentifiers: [holidayNotificationIdentifier(holiday.id)])
+        let title = holiday.name
+        let body = holidayNotificationBody(holiday: holiday, fireDate: fireDate)
+        scheduleNotification(date: fireDate, title: title, body: body, identifier: holidayNotificationIdentifier(holiday.id))
+    }
+
+    func cancelHolidayNotification(holidayId: UUID) {
+        notifier.removePendingNotifications(withIdentifiers: [holidayNotificationIdentifier(holidayId)])
+    }
+
+    // MARK: - Holiday pending UI (calendar + detail)
+
+    /// Vietnam **calendar day** of each pending holiday notification (for month grid highlights).
+    func pendingHolidayReminderSolarDates() async -> Set<SolarDate> {
+        let pairs = await notifier.pendingHolidayReminderFires()
+        return Set(pairs.map { solarDateForVietnamDay(of: $0.fireDate) })
+    }
+
+    /// Catalog holiday with a pending reminder whose fire falls on this solar day (Vietnam), if any.
+    func holidayWithPendingReminder(on solar: SolarDate) async -> Holiday? {
+        let pairs = await notifier.pendingHolidayReminderFires()
+        for (id, fire) in pairs {
+            let s = solarDateForVietnamDay(of: fire)
+            if s == solar, let h = HolidayData.allHolidays.first(where: { $0.id == id }) {
+                return h
+            }
+        }
+        return nil
+    }
+
+    private func solarDateForVietnamDay(of date: Date) -> SolarDate {
+        var cal = Calendar(identifier: .gregorian)
+        cal.timeZone = LunarReminderConverter.vietnamTimeZone
+        return SolarDate(
+            year: cal.component(.year, from: date),
+            month: cal.component(.month, from: date),
+            day: cal.component(.day, from: date)
+        )
     }
 
     // MARK: - scheduleReminder(reminder:)
@@ -160,6 +223,22 @@ final class ReminderService {
 
     private func noteNotificationIdentifier(_ id: UUID) -> String {
         "calendar.note.\(id.uuidString)"
+    }
+
+    private func holidayNotificationIdentifier(_ id: UUID) -> String {
+        HolidayPendingNotificationId.identifier(holidayId: id)
+    }
+
+    private func holidayNotificationBody(holiday: Holiday, fireDate: Date) -> String {
+        var cal = Calendar(identifier: .gregorian)
+        cal.timeZone = LunarReminderConverter.vietnamTimeZone
+        let y = cal.component(.year, from: fireDate)
+        let m = cal.component(.month, from: fireDate)
+        let d = cal.component(.day, from: fireDate)
+        let solar = SolarDate(year: y, month: m, day: d)
+        let lunar = engine.solarToLunar(date: solar)
+        let short = holiday.shortDescription
+        return "\(short)\nÂm \(lunar.day)/\(lunar.month)/\(lunar.year) · Dương \(d)/\(m)/\(y)"
     }
 
     private func scheduleNotification(date: Date, title: String, body: String, identifier: String) {
